@@ -1,0 +1,36 @@
+﻿# Java class files  
+*.class
+
+#Package Files#
+*.jar
+*.war
+*.ear
+
+#Eclipse project files
+.classpath
+.project
+.settings/
+.metadata
+
+# .gitignore for maven 
+target/
+*.releaseBackup
+
+# logs
+stacktrace.log
+test/reports
+logs
+*.log
+*.log.*
+
+# IntelliJ project files
+.idea/*
+vcs.xml
+workspace.xml
+*.iml
+out/
+gen/
+target/*
+*.ipr
+*.ids
+*.iws
