@@ -3,7 +3,6 @@ package com.willc.sonarqube.webapi.client.impl;
 import com.willc.sonarqube.webapi.SonarClient;
 import com.willc.sonarqube.webapi.client.*;
 
-import java.io.IOException;
 import java.net.URI;
 
 /**

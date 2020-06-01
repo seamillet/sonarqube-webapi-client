@@ -13,13 +13,27 @@ public class MeasureClient {
     }
 
     /**
-     * Return component with specified measures. The componentId or the componentKey parameter must be provided.
-     *
-     * @return
+     * Return specified metric for a given component (referenced by key).
+     * 
+     * @param componentKey The component key
+     * @param metricKeys The metric key(s) - comma-separated list. Example: "complexity,violations"
+     * @return the specified metric(s) value(s) in JSON format
      * @throws IOException
      */
-    public String getComponentMeasures(String componentId) throws IOException {
-        return this.httpClient.get(String.format("api/measures/component?componentId=%s&metricKeys=ncloc,complexity,violations", componentId));
+    public String getComponentMeasuresByKey(String componentKey, String metricKeys) throws IOException {
+        return this.httpClient.get(String.format("api/measures/component?componentKey=%s&metricKeys=%s", componentKey, metricKeys));
+    }
+
+    /**
+     * Return specified metric for a given component (referenced by ID).
+     *
+     * @param componentId The component ID
+     * @param metricKeys The metric key(s) - comma-separated list. Example: "complexity,violations"
+     * @return the specified metric(s) value(s) in JSON format
+     * @throws IOException
+     */
+    public String getComponentMeasuresById(String componentId, String metricKeys) throws IOException {
+        return this.httpClient.get(String.format("api/measures/component?componentId=%s&metricKeys=%s", componentId, metricKeys));
     }
 
     /**
