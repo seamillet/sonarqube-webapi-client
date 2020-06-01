@@ -22,9 +22,22 @@ public class SonarServer {
     private final Logger logger;
     private final SonarClient client;
 
+    public SonarServer(URI serverUri) {
+    	this(serverUri, null, null);
+    }
+
     public SonarServer(URI serverUri, String username, String passwordOrToken) {
         this.logger = LoggerFactory.getLogger(this.getClass());
         this.client = new SonarClientImpl(serverUri, username, passwordOrToken);
+    }
+
+    /**
+     * Retrieve client API endpoint
+     * 
+     * @return A client to query Sonar server
+     */
+    public SonarClient getClient() {
+    	return this.client;
     }
 
     /**
@@ -114,6 +127,5 @@ public class SonarServer {
     public Groups getGroupsOfUser(String login, String p, String ps, String selected) throws IOException {
         return client.getUserClient().getGroupsOfUser(login, p, ps, selected);
     }
-
 
 }
