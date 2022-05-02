@@ -33,7 +33,7 @@ public class SonarClientTest {
 
     @Test
     public void initSonarClientWithToken() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), TOKEN, "");
+        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), TOKEN);
         Groups groups = client.getUserClient().getUserGroups(USER, null, null, null, null);
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);

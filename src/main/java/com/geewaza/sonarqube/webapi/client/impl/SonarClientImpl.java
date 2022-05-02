@@ -17,8 +17,23 @@ public class SonarClientImpl implements SonarClient {
     private final ProjectClient projectClient;
     private final SystemClient systemClient;
 
-    public SonarClientImpl(URI uri, String username, String passwordOrToken) {
-        BaseHttpClient baseHttpClient = new BaseHttpClient(uri, username, passwordOrToken);
+    /**
+     * SonarClientImpl constructor with token
+     * @param uri   Sonarqube host url
+     * @param token Access token
+     */
+    public SonarClientImpl(URI uri, String token) {
+        this(uri, token, "");
+    }
+
+    /**
+     * SonarClientImpl constructor with username and password
+     * @param uri       Sonarqube host url
+     * @param username  User login name
+     * @param password  Password
+     */
+    public SonarClientImpl(URI uri, String username, String password) {
+        BaseHttpClient baseHttpClient = new BaseHttpClient(uri, username, password);
 
         this.ceClient = new CeClientImpl(baseHttpClient);
         this.componentClient = new ComponentClientImpl(baseHttpClient);
