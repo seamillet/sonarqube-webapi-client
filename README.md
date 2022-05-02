@@ -29,8 +29,8 @@ public class SonarClientTest {
 
 }
 ```
-
-| API | code | test |
+# TODO List
+| API | Coding | Testing |
 |:---|---|---|
 |api/authentication|[ ]|[ ]|
 |api/ce|[x]|[ ]|
