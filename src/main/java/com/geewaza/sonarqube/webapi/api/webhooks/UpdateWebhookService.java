@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 22:46
  **/
-public class UpdateWebhookService extends AbstractService<UpdateWebhookService, String> {
+public class UpdateWebhookService extends AbstractService<UpdateWebhookService, Boolean> {
     public UpdateWebhookService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -24,8 +24,9 @@ public class UpdateWebhookService extends AbstractService<UpdateWebhookService, 
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doPost("api/webhooks/update", String.class);
+    protected Boolean doExecute() throws IOException {
+        doPost("api/webhooks/update");
+        return true;
     }
 
     public UpdateWebhookService name(String name) {

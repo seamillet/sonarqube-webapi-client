@@ -1,10 +1,10 @@
 package com.geewaza.sonarqube.webapi;
 
-import com.geewaza.sonarqube.webapi.api.IssuesClient;
-import com.geewaza.sonarqube.webapi.api.NotificationsClient;
-import com.geewaza.sonarqube.webapi.api.UserClient;
-import com.geewaza.sonarqube.webapi.api.WebhooksClient;
-import com.geewaza.sonarqube.webapi.client.*;
+import com.geewaza.sonarqube.webapi.api.*;
+import com.geewaza.sonarqube.webapi.client.CeClient;
+import com.geewaza.sonarqube.webapi.client.ComponentClient;
+import com.geewaza.sonarqube.webapi.client.MeasureClient;
+import com.geewaza.sonarqube.webapi.client.SystemClient;
 
 /**
  *
@@ -41,11 +41,11 @@ public interface SonarClient {
     MeasureClient getMeasureClient();
 
     /**
-     * Get Project API Client
+     * Get Projects API Client
      *
      * @return ProjectClient
      */
-    ProjectClient getProjectClient();
+    ProjectsClient getProjectsClient();
 
     /**
      * Get System API Client

@@ -1,10 +1,7 @@
 package com.geewaza.sonarqube.webapi.client.impl;
 
 import com.geewaza.sonarqube.webapi.SonarClient;
-import com.geewaza.sonarqube.webapi.api.IssuesClient;
-import com.geewaza.sonarqube.webapi.api.NotificationsClient;
-import com.geewaza.sonarqube.webapi.api.UserClient;
-import com.geewaza.sonarqube.webapi.api.WebhooksClient;
+import com.geewaza.sonarqube.webapi.api.*;
 import com.geewaza.sonarqube.webapi.client.*;
 
 import java.net.URI;
@@ -18,7 +15,7 @@ public class SonarClientImpl implements SonarClient {
     private final ComponentClient componentClient;
     private final UserClient userClient;
     private final MeasureClient measureClient;
-    private final ProjectClient projectClient;
+    private final ProjectsClient projectsClient;
     private final SystemClient systemClient;
     private final IssuesClient issuesClient;
     private final NotificationsClient notificationsClient;
@@ -46,7 +43,7 @@ public class SonarClientImpl implements SonarClient {
         this.componentClient = new ComponentClientImpl(baseHttpClient);
         this.userClient = new UserClient(baseHttpClient);
         this.measureClient = new MeasureClientImpl(baseHttpClient);
-        this.projectClient = new ProjectClientImpl(baseHttpClient);
+        this.projectsClient = new ProjectsClient(baseHttpClient);
         this.systemClient = new SystemClientImpl(baseHttpClient);
         this.issuesClient = new IssuesClient(baseHttpClient);
         this.notificationsClient = new NotificationsClient(baseHttpClient);
@@ -95,13 +92,13 @@ public class SonarClientImpl implements SonarClient {
     }
 
     /**
-     * Get Project API Client
+     * Get Projects API Client
      *
      * @return ProjectClient
      */
     @Override
-    public ProjectClient getProjectClient() {
-        return this.projectClient;
+    public ProjectsClient getProjectsClient() {
+        return this.projectsClient;
     }
 
     /**

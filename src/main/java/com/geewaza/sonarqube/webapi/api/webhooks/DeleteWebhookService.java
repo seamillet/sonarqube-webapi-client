@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 22:46
  **/
-public class DeleteWebhookService extends AbstractService<DeleteWebhookService, String> {
+public class DeleteWebhookService extends AbstractService<DeleteWebhookService, Boolean> {
     public DeleteWebhookService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -23,8 +23,9 @@ public class DeleteWebhookService extends AbstractService<DeleteWebhookService, 
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doPost("api/webhooks/delete", String.class);
+    protected Boolean doExecute() throws IOException {
+        doPost("api/webhooks/delete");
+        return true;
     }
 
     public DeleteWebhookService webhook(String webhook) {

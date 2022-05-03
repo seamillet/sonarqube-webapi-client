@@ -15,7 +15,7 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 22:32
  **/
-public class RemoveNotificationsService extends AbstractService<RemoveNotificationsService, String> {
+public class RemoveNotificationsService extends AbstractService<RemoveNotificationsService, Boolean> {
     public RemoveNotificationsService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -26,8 +26,9 @@ public class RemoveNotificationsService extends AbstractService<RemoveNotificati
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doPost("api/notifications/remove", String.class);
+    protected Boolean doExecute() throws IOException {
+        doPost("api/notifications/remove");
+        return true;
     }
     public RemoveNotificationsService channel(String channel) {
         return put("channel", channel);

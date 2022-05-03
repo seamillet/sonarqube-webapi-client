@@ -136,8 +136,10 @@ public class BaseHttpClient {
     public String post(String path, Map<String, Object> params, String jsonBody) throws IOException {
         path = appendParams(path, params);
         HttpPost httpPost = new HttpPost(this.api(path));
-        StringEntity se = new StringEntity(jsonBody, ContentType.create("application/json", "UTF-8"));
-        httpPost.setEntity(se);
+        if (StringUtils.isNotBlank(jsonBody)) {
+            StringEntity se = new StringEntity(jsonBody, ContentType.create("application/json", "UTF-8"));
+            httpPost.setEntity(se);
+        }
         CloseableHttpResponse response = null;
         try {
             response = (CloseableHttpResponse) this.client.execute(httpPost);

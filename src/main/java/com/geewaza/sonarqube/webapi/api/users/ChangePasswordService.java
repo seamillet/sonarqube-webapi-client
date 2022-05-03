@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 21:53
  **/
-public class ChangePasswordService extends AbstractService<ChangePasswordService, String> {
+public class ChangePasswordService extends AbstractService<ChangePasswordService, Boolean> {
     public ChangePasswordService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -22,8 +22,9 @@ public class ChangePasswordService extends AbstractService<ChangePasswordService
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doPost("api/users/change_password", String.class);
+    protected Boolean doExecute() throws IOException {
+        doPost("api/users/change_password");
+        return true;
     }
 
     public ChangePasswordService login(String login) {

@@ -9,7 +9,7 @@ public class SonarClientTest {
     private static final String SERVER_URL = "http://localhost:9000/";
     private static final String USER = "username";
     private static final String PASSWORD = "password";
-    private static final String TOKEN = "accesstoken";
+    private static final String TOKEN = "access_token";
 
     @Test
     public void initSonarClientWithUserPassword() throws URISyntaxException, IOException {

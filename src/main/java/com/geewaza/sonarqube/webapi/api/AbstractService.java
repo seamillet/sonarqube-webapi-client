@@ -38,11 +38,11 @@ public abstract class AbstractService<T, S> {
     }
 
     protected S doPost(String path, Class<S> clazz) throws IOException {
-        return httpClient.post(path, null, params.isEmpty() ? null : JSONObject.toJSONString(params), clazz);
+        return httpClient.post(path, params, null, clazz);
     }
 
     protected String doPost(String path) throws IOException {
-        return httpClient.post(path, null, params.isEmpty() ? null : JSONObject.toJSONString(params));
+        return httpClient.post(path, params, null);
     }
 
     protected S doGet(String path, Class<S> clazz) throws IOException {

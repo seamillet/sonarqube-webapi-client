@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 21:55
  **/
-public class UpdateLoginService extends AbstractService<UpdateLoginService, String> {
+public class UpdateLoginService extends AbstractService<UpdateLoginService, Boolean> {
     public UpdateLoginService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -23,8 +23,9 @@ public class UpdateLoginService extends AbstractService<UpdateLoginService, Stri
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doPost("api/users/update_login", String.class);
+    protected Boolean doExecute() throws IOException {
+        doPost("api/users/update_login");
+        return true;
     }
 
     public UpdateLoginService login(String login) {
