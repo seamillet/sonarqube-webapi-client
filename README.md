@@ -64,3 +64,10 @@ public class SonarClientTest {
 |api/users|[x]|[ ]|
 |api/webhooks|[ ]|[ ]|
 |api/webservices|[x]|[ ]|
+
+# Contribution
+### Library
+Contributing to standard library follows standard workflow. Create feature/bugfix branch, implement, create pull request with me as a reviewer and merge after approval :-)
+
+### Testing
+The library is tested manually at this point. If you are interested in implementing any kind of testing, unit testing, integration testing, end-to-end testing, potentially including some virtualization you are welcome to do so. Please follow the same workflow as for any work on library itself.
