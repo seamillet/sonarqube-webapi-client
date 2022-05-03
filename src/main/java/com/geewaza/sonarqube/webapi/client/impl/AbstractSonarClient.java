@@ -18,7 +18,7 @@ import java.util.Map;
  **/
 public abstract class AbstractSonarClient {
 
-    BaseHttpClient httpClient;
+    protected BaseHttpClient httpClient;
 
     public AbstractSonarClient(BaseHttpClient httpClient) {
         this.httpClient = httpClient;

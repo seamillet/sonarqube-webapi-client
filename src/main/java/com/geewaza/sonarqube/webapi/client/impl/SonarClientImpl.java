@@ -1,6 +1,10 @@
 package com.geewaza.sonarqube.webapi.client.impl;
 
 import com.geewaza.sonarqube.webapi.SonarClient;
+import com.geewaza.sonarqube.webapi.api.IssuesClient;
+import com.geewaza.sonarqube.webapi.api.NotificationsClient;
+import com.geewaza.sonarqube.webapi.api.UserClient;
+import com.geewaza.sonarqube.webapi.api.WebhooksClient;
 import com.geewaza.sonarqube.webapi.client.*;
 
 import java.net.URI;
@@ -16,6 +20,9 @@ public class SonarClientImpl implements SonarClient {
     private final MeasureClient measureClient;
     private final ProjectClient projectClient;
     private final SystemClient systemClient;
+    private final IssuesClient issuesClient;
+    private final NotificationsClient notificationsClient;
+    private final WebhooksClient webhooksClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -37,10 +44,13 @@ public class SonarClientImpl implements SonarClient {
 
         this.ceClient = new CeClientImpl(baseHttpClient);
         this.componentClient = new ComponentClientImpl(baseHttpClient);
-        this.userClient = new UserClientImpl(baseHttpClient);
+        this.userClient = new UserClient(baseHttpClient);
         this.measureClient = new MeasureClientImpl(baseHttpClient);
         this.projectClient = new ProjectClientImpl(baseHttpClient);
         this.systemClient = new SystemClientImpl(baseHttpClient);
+        this.issuesClient = new IssuesClient(baseHttpClient);
+        this.notificationsClient = new NotificationsClient(baseHttpClient);
+        this.webhooksClient = new WebhooksClient(baseHttpClient);
     }
 
 
@@ -102,5 +112,35 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public SystemClient getSystemClient() {
         return this.systemClient;
+    }
+
+    /**
+     * Get Issues API Client
+     *
+     * @return IssuesClient
+     */
+    @Override
+    public IssuesClient getIssuesClient() {
+        return this.issuesClient;
+    }
+
+    /**
+     * Get Notifications API Client
+     *
+     * @return NotificationsClient
+     */
+    @Override
+    public NotificationsClient getNotificationsClient() {
+        return this.notificationsClient;
+    }
+
+    /**
+     * Get Webhooks API Client
+     *
+     * @return WebhooksClient
+     */
+    @Override
+    public WebhooksClient getWebhooksClient() {
+        return this.webhooksClient;
     }
 }

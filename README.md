@@ -37,11 +37,11 @@ public class SonarClientTest {
 |api/components|[x]|[ ]|
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
-|api/issues|[ ]|[ ]|
+|api/issues|[x]|[ ]|
 |api/languages|[x]|[ ]|
 |api/measures|[x]|[ ]|
 |api/metrics|[x]|[ ]|
-|api/notifications|[ ]|[ ]|
+|api/notifications|[x]|[ ]|
 |api/permissions|[ ]|[ ]|
 |api/plugins|[ ]|[ ]|
 |api/project_analyses|[ ]|[ ]|
@@ -62,7 +62,7 @@ public class SonarClientTest {
 |api/user_groups|[ ]|[ ]|
 |api/user_tokens|[ ]|[ ]|
 |api/users|[x]|[ ]|
-|api/webhooks|[ ]|[ ]|
+|api/webhooks|[x]|[ ]|
 |api/webservices|[x]|[ ]|
 
 # Contribution

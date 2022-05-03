@@ -26,7 +26,7 @@ public class SonarClientTest {
     @Test
     public void initSonarClientWithUserPassword() throws URISyntaxException, IOException {
         SonarClient client = new SonarClientImpl(new URI(SERVER_URL), USER, PASSWORD);
-        Groups groups = client.getUserClient().getUserGroups(USER, null, null, null, null);
+        Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);
     }
@@ -34,7 +34,7 @@ public class SonarClientTest {
     @Test
     public void initSonarClientWithToken() throws URISyntaxException, IOException {
         SonarClient client = new SonarClientImpl(new URI(SERVER_URL), TOKEN);
-        Groups groups = client.getUserClient().getUserGroups(USER, null, null, null, null);
+        Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);
     }

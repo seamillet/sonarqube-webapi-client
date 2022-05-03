@@ -1,5 +1,9 @@
 package com.geewaza.sonarqube.webapi;
 
+import com.geewaza.sonarqube.webapi.api.IssuesClient;
+import com.geewaza.sonarqube.webapi.api.NotificationsClient;
+import com.geewaza.sonarqube.webapi.api.UserClient;
+import com.geewaza.sonarqube.webapi.api.WebhooksClient;
 import com.geewaza.sonarqube.webapi.client.*;
 
 /**
@@ -49,4 +53,25 @@ public interface SonarClient {
      * @return SystemClient
      */
     SystemClient getSystemClient();
+
+    /**
+     * Get Issues API Client
+     *
+     * @return IssuesClient
+     */
+    IssuesClient getIssuesClient();
+
+    /**
+     * Get Notifications API Client
+     *
+     * @return NotificationsClient
+     */
+    NotificationsClient getNotificationsClient();
+
+    /**
+     * Get Webhooks API Client
+     *
+     * @return WebhooksClient
+     */
+    WebhooksClient getWebhooksClient();
 }
