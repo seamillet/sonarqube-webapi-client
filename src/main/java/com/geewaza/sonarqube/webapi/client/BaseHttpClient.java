@@ -4,9 +4,12 @@ import com.geewaza.sonarqube.webapi.client.authentication.PreemptiveAuth;
 import com.geewaza.sonarqube.webapi.util.HttpResponseValidator;
 import com.geewaza.sonarqube.webapi.util.HttpResponseWrapper;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.http.Consts;
+import org.apache.http.NameValuePair;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -16,7 +19,9 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.EntityUtils;
 
@@ -24,6 +29,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -134,10 +141,20 @@ public class BaseHttpClient {
      * @throws IOException  error
      */
     public String post(String path, Map<String, Object> params, String jsonBody) throws IOException {
-        path = appendParams(path, params);
+//        path = appendParams(path, params);
         HttpPost httpPost = new HttpPost(this.api(path));
+
+        if (null != params && params.size() > 0) {
+            List<NameValuePair> form = new ArrayList<>();
+            for (String name : params.keySet()) {
+                form.add(new BasicNameValuePair(name, params.get(name).toString()));
+            }
+            UrlEncodedFormEntity entity = new UrlEncodedFormEntity(form, Consts.UTF_8);
+            httpPost.setEntity(entity);
+        }
+
         if (StringUtils.isNotBlank(jsonBody)) {
-            StringEntity se = new StringEntity(jsonBody, ContentType.create("application/json", "UTF-8"));
+            StringEntity se = new StringEntity(jsonBody, ContentType.create("application/json", Consts.UTF_8));
             httpPost.setEntity(se);
         }
         CloseableHttpResponse response = null;
