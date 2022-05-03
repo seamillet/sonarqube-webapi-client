@@ -32,11 +32,11 @@ public class SonarClientTest {
 # TODO List
 | API | Coding | Testing |
 |:---|---|---|
-|api/authentication|[ ]|[ ]|
+|api/authentication|[x]|[ ]|
 |api/ce|[x]|[ ]|
 |api/components|[x]|[ ]|
-|api/duplications|[ ]|[ ]|
-|api/favorites|[ ]|[ ]|
+|api/duplications|[x]|[ ]|
+|api/favorites|[x]|[ ]|
 |api/issues|[ ]|[ ]|
 |api/languages|[ ]|[ ]|
 |api/measures|[x]|[ ]|
@@ -54,7 +54,7 @@ public class SonarClientTest {
 |api/qualitygates|[ ]|[ ]|
 |api/qualityprofiles|[ ]|[ ]|
 |api/rules|[ ]|[ ]|
-|api/server|[ ]|[ ]|
+|api/server|[x]|[ ]|
 |api/settings|[ ]|[ ]|
 |api/sources|[ ]|[ ]|
 |api/system|[x]|[ ]|
