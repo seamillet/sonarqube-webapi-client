@@ -14,7 +14,7 @@ public class ComponentMeasuresTree extends Paging {
 
     private BaseComponent baseComponent;
     private Components[] components;
-    private Metrics[] metrics;
+    private Metric[] metrics;
     private Period period;
 
     public BaseComponent getBaseComponent() {
@@ -33,11 +33,11 @@ public class ComponentMeasuresTree extends Paging {
         this.components = components;
     }
 
-    public Metrics[] getMetrics() {
+    public Metric[] getMetrics() {
         return metrics;
     }
 
-    public void setMetrics(Metrics[] metrics) {
+    public void setMetrics(Metric[] metrics) {
         this.metrics = metrics;
     }
 

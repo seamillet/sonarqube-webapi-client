@@ -38,9 +38,9 @@ public class SonarClientTest {
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
 |api/issues|[ ]|[ ]|
-|api/languages|[ ]|[ ]|
+|api/languages|[x]|[ ]|
 |api/measures|[x]|[ ]|
-|api/metrics|[ ]|[ ]|
+|api/metrics|[x]|[ ]|
 |api/notifications|[ ]|[ ]|
 |api/permissions|[ ]|[ ]|
 |api/plugins|[ ]|[ ]|
@@ -63,4 +63,4 @@ public class SonarClientTest {
 |api/user_tokens|[ ]|[ ]|
 |api/users|[x]|[ ]|
 |api/webhooks|[ ]|[ ]|
-|api/webservices|[ ]|[ ]|
+|api/webservices|[x]|[ ]|

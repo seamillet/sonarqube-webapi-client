@@ -13,7 +13,7 @@ import com.geewaza.sonarqube.webapi.model.component.Component;
 public class ComponentMeasures {
 
     private Component component;
-    private Metrics[] metrics;
+    private Metric[] metrics;
     private Period periods;
 
     public Component getComponent() {
@@ -24,11 +24,11 @@ public class ComponentMeasures {
         this.component = component;
     }
 
-    public Metrics[] getMetrics() {
+    public Metric[] getMetrics() {
         return metrics;
     }
 
-    public void setMetrics(Metrics[] metrics) {
+    public void setMetrics(Metric[] metrics) {
         this.metrics = metrics;
     }
 

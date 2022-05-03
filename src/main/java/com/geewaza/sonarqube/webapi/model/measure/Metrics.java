@@ -1,85 +1,22 @@
-/**
- * Copyright 2022 bejson.com
- */
 package com.geewaza.sonarqube.webapi.model.measure;
 
+import com.geewaza.sonarqube.webapi.model.PageModel;
+
 /**
- * Auto-generated: 2022-04-29 9:30:58
+ * <p></p>
  *
- * @author wangheng
- */
-public class Metrics {
+ * @author : wangheng
+ * @date : 2022-05-03 17:53
+ **/
+public class Metrics extends PageModel {
 
-    private String key;
-    private String name;
-    private String description;
-    private String domain;
-    private String type;
-    private Boolean higherValuesAreBetter;
-    private Boolean qualitative;
-    private Boolean hidden;
+    private Metric[] metrics;
 
-    public String getKey() {
-        return key;
+    public Metric[] getMetrics() {
+        return metrics;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getDomain() {
-        return domain;
-    }
-
-    public void setDomain(String domain) {
-        this.domain = domain;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Boolean getHigherValuesAreBetter() {
-        return higherValuesAreBetter;
-    }
-
-    public void setHigherValuesAreBetter(Boolean higherValuesAreBetter) {
-        this.higherValuesAreBetter = higherValuesAreBetter;
-    }
-
-    public Boolean getQualitative() {
-        return qualitative;
-    }
-
-    public void setQualitative(Boolean qualitative) {
-        this.qualitative = qualitative;
-    }
-
-    public Boolean getHidden() {
-        return hidden;
-    }
-
-    public void setHidden(Boolean hidden) {
-        this.hidden = hidden;
+    public void setMetrics(Metric[] metrics) {
+        this.metrics = metrics;
     }
 }
