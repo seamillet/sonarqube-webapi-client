@@ -77,7 +77,21 @@ public interface SonarClient {
     /**
      * Get UserToken API Client
      *
-     * @return WebhooksClient
+     * @return UserTokenClient
      */
     UserTokenClient getUserTokenClient();
+
+    /**
+     * Get Authentication API Client
+     *
+     * @return AuthenticationClient
+     */
+    AuthenticationClient getAuthenticationClient();
+
+    /**
+     * Get Permissions API Client
+     *
+     * @return PermissionsClient
+     */
+    PermissionsClient getPermissionsClient();
 }

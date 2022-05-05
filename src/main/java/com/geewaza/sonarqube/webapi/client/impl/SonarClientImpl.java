@@ -11,6 +11,7 @@ import java.net.URI;
  * @date 2017/6/20
  */
 public class SonarClientImpl implements SonarClient {
+    private final AuthenticationClient authenticationClient;
     private final CeClient ceClient;
     private final ComponentsClient componentsClient;
     private final UserClient userClient;
@@ -21,6 +22,7 @@ public class SonarClientImpl implements SonarClient {
     private final NotificationsClient notificationsClient;
     private final WebhooksClient webhooksClient;
     private final UserTokenClient userTokenClient;
+    private final PermissionsClient permissionsClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -40,6 +42,7 @@ public class SonarClientImpl implements SonarClient {
     public SonarClientImpl(URI uri, String username, String password) {
         BaseHttpClient baseHttpClient = new BaseHttpClient(uri, username, password);
 
+        this.authenticationClient = new AuthenticationClient(baseHttpClient);
         this.ceClient = new CeClientImpl(baseHttpClient);
         this.componentsClient = new ComponentsClient(baseHttpClient);
         this.userClient = new UserClient(baseHttpClient);
@@ -50,6 +53,7 @@ public class SonarClientImpl implements SonarClient {
         this.notificationsClient = new NotificationsClient(baseHttpClient);
         this.webhooksClient = new WebhooksClient(baseHttpClient);
         this.userTokenClient = new UserTokenClient(baseHttpClient);
+        this.permissionsClient = new PermissionsClient(baseHttpClient);
     }
 
 
@@ -151,5 +155,25 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public UserTokenClient getUserTokenClient() {
         return this.userTokenClient;
+    }
+
+    /**
+     * Get Authentication API Client
+     *
+     * @return AuthenticationClient
+     */
+    @Override
+    public AuthenticationClient getAuthenticationClient() {
+        return this.authenticationClient;
+    }
+
+    /**
+     * Get Permissions API Client
+     *
+     * @return PermissionsClient
+     */
+    @Override
+    public PermissionsClient getPermissionsClient() {
+        return this.permissionsClient;
     }
 }

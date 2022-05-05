@@ -42,7 +42,7 @@ public class SonarClientTest {
 |api/measures|[x]|[ ]|
 |api/metrics|[x]|[ ]|
 |api/notifications|[x]|[ ]|
-|api/permissions|[ ]|[ ]|
+|api/permissions|[x]|[ ]|
 |api/plugins|[ ]|[ ]|
 |api/project_analyses|[ ]|[ ]|
 |api/project_badges|[ ]|[ ]|
