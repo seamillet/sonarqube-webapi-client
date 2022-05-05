@@ -12,7 +12,7 @@ import java.net.URI;
  */
 public class SonarClientImpl implements SonarClient {
     private final CeClient ceClient;
-    private final ComponentClient componentClient;
+    private final ComponentsClient componentsClient;
     private final UserClient userClient;
     private final MeasureClient measureClient;
     private final ProjectsClient projectsClient;
@@ -20,6 +20,7 @@ public class SonarClientImpl implements SonarClient {
     private final IssuesClient issuesClient;
     private final NotificationsClient notificationsClient;
     private final WebhooksClient webhooksClient;
+    private final UserTokenClient userTokenClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -40,7 +41,7 @@ public class SonarClientImpl implements SonarClient {
         BaseHttpClient baseHttpClient = new BaseHttpClient(uri, username, password);
 
         this.ceClient = new CeClientImpl(baseHttpClient);
-        this.componentClient = new ComponentClientImpl(baseHttpClient);
+        this.componentsClient = new ComponentsClient(baseHttpClient);
         this.userClient = new UserClient(baseHttpClient);
         this.measureClient = new MeasureClientImpl(baseHttpClient);
         this.projectsClient = new ProjectsClient(baseHttpClient);
@@ -48,6 +49,7 @@ public class SonarClientImpl implements SonarClient {
         this.issuesClient = new IssuesClient(baseHttpClient);
         this.notificationsClient = new NotificationsClient(baseHttpClient);
         this.webhooksClient = new WebhooksClient(baseHttpClient);
+        this.userTokenClient = new UserTokenClient(baseHttpClient);
     }
 
 
@@ -67,8 +69,8 @@ public class SonarClientImpl implements SonarClient {
      * @return ComponentClient
      */
     @Override
-    public ComponentClient getComponentClient() {
-        return this.componentClient;
+    public ComponentsClient getComponentsClient() {
+        return this.componentsClient;
     }
 
     /**
@@ -139,5 +141,15 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public WebhooksClient getWebhooksClient() {
         return this.webhooksClient;
+    }
+
+    /**
+     * Get UserToken API Client
+     *
+     * @return WebhooksClient
+     */
+    @Override
+    public UserTokenClient getUserTokenClient() {
+        return this.userTokenClient;
     }
 }

@@ -60,7 +60,7 @@ public class SonarClientTest {
 |api/system|[x]|[ ]|
 |api/updatecenter|[ ]|[ ]|
 |api/user_groups|[ ]|[ ]|
-|api/user_tokens|[ ]|[ ]|
+|api/|[x]|[ ]|
 |api/users|[x]|[ ]|
 |api/webhooks|[x]|[ ]|
 |api/webservices|[x]|[ ]|

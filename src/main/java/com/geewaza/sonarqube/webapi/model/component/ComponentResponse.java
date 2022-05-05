@@ -8,7 +8,7 @@ package com.geewaza.sonarqube.webapi.model.component;
  *
  * @author wangheng
  */
-public class ComponentShow {
+public class ComponentResponse {
 
     private Component component;
 

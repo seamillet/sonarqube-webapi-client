@@ -7,15 +7,15 @@ import com.geewaza.sonarqube.webapi.model.component.Components;
 import java.io.IOException;
 
 /**
- * <p></p>
+ * Search for components
  *
  * @author : wangheng
  * @date : 2022-05-03 18:51
  **/
-public class ComponentsSearchService extends AbstractService<ComponentsSearchService, Components> {
+public class SearchComponentsService extends AbstractService<SearchComponentsService, Components> {
 
 
-    public ComponentsSearchService(BaseHttpClient httpClient) {
+    public SearchComponentsService(BaseHttpClient httpClient) {
         super(httpClient);
     }
 
@@ -29,22 +29,22 @@ public class ComponentsSearchService extends AbstractService<ComponentsSearchSer
         return this.httpClient.get("api/components/search", params, Components.class);
     }
 
-    public ComponentsSearchService language(String language) {
+    public SearchComponentsService language(String language) {
         return put("language", language);
     }
 
-    public ComponentsSearchService p(Integer p) {
+    public SearchComponentsService p(Integer p) {
         return put("p", p);
     }
 
-    public ComponentsSearchService ps(Integer ps) {
+    public SearchComponentsService ps(Integer ps) {
         return put("ps", ps);
     }
 
-    public ComponentsSearchService q(String q) {
+    public SearchComponentsService q(String q) {
         return put("q", q);
     }
-    public ComponentsSearchService qualifiers(String... qualifier) {
+    public SearchComponentsService qualifiers(String... qualifier) {
         return putCsvParam("qualifiers", qualifier);
     }
 

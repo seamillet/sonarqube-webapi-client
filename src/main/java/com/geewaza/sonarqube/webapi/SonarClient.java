@@ -2,7 +2,6 @@ package com.geewaza.sonarqube.webapi;
 
 import com.geewaza.sonarqube.webapi.api.*;
 import com.geewaza.sonarqube.webapi.client.CeClient;
-import com.geewaza.sonarqube.webapi.client.ComponentClient;
 import com.geewaza.sonarqube.webapi.client.MeasureClient;
 import com.geewaza.sonarqube.webapi.client.SystemClient;
 
@@ -24,7 +23,7 @@ public interface SonarClient {
      *
      * @return ComponentClient
      */
-    ComponentClient getComponentClient();
+    ComponentsClient getComponentsClient();
 
     /**
      * Get User API Client
@@ -74,4 +73,11 @@ public interface SonarClient {
      * @return WebhooksClient
      */
     WebhooksClient getWebhooksClient();
+
+    /**
+     * Get UserToken API Client
+     *
+     * @return WebhooksClient
+     */
+    UserTokenClient getUserTokenClient();
 }
