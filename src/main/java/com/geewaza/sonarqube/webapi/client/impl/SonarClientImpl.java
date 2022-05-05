@@ -26,6 +26,9 @@ public class SonarClientImpl implements SonarClient {
     private final UserTokenClient userTokenClient;
     private final PermissionsClient permissionsClient;
     private final PluginsClient pluginsClient;
+    private final ServerClient serverClient;
+    private final QualityGatesClient qualityGatesClient;
+    private final QualityProfileClient qualityProfileClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -58,6 +61,9 @@ public class SonarClientImpl implements SonarClient {
         this.userTokenClient = new UserTokenClient(baseHttpClient);
         this.permissionsClient = new PermissionsClient(baseHttpClient);
         this.pluginsClient = new PluginsClient(baseHttpClient);
+        this.serverClient = new ServerClient(baseHttpClient);
+        this.qualityGatesClient = new QualityGatesClient(baseHttpClient);
+        this.qualityProfileClient = new QualityProfileClient(baseHttpClient);
     }
 
 
@@ -189,5 +195,35 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public PluginsClient getPluginsClient() {
         return this.pluginsClient;
+    }
+
+    /**
+     * Get Server API Client
+     *
+     * @return ServerClient
+     */
+    @Override
+    public ServerClient getServerClient() {
+        return this.serverClient;
+    }
+
+    /**
+     * Get QualityGates API Client
+     *
+     * @return ServerClient
+     */
+    @Override
+    public QualityGatesClient getQualityGatesClient() {
+        return this.qualityGatesClient;
+    }
+
+    /**
+     * Get QualityProfile API Client
+     *
+     * @return ServerClient
+     */
+    @Override
+    public QualityProfileClient getQualityProfileClient() {
+        return this.qualityProfileClient;
     }
 }

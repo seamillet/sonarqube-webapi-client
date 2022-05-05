@@ -100,4 +100,25 @@ public interface SonarClient {
      * @return PluginsClient
      */
     PluginsClient getPluginsClient();
+
+    /**
+     * Get Server API Client
+     *
+     * @return ServerClient
+     */
+    ServerClient getServerClient();
+
+    /**
+     * Get QualityGates API Client
+     *
+     * @return ServerClient
+     */
+    QualityGatesClient getQualityGatesClient();
+
+    /**
+     * Get QualityProfile API Client
+     *
+     * @return ServerClient
+     */
+    QualityProfileClient getQualityProfileClient();
 }

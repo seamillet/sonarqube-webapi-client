@@ -1,19 +1,22 @@
-package com.geewaza.sonarqube.webapi.model.user;
+package com.geewaza.sonarqube.webapi.model.qualitygates;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
 /**
+ * <p></p>
  *
- * @author wangheng
- * @date 2017/6/20
- */
-public class Group {
+ * @author : wangheng
+ * @date : 2022-05-05 12:01
+ **/
+public class QualityGate {
+
     private Long id;
+
     private String name;
-    private String description;
-    private Boolean selected;
     @JSONField(name = "default")
     private Boolean isDefault;
+
+    private Boolean selected;
 
     public Long getId() {
         return id;
@@ -31,12 +34,12 @@ public class Group {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public Boolean getDefault() {
+        return isDefault;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDefault(Boolean aDefault) {
+        isDefault = aDefault;
     }
 
     public Boolean getSelected() {
@@ -45,13 +48,5 @@ public class Group {
 
     public void setSelected(Boolean selected) {
         this.selected = selected;
-    }
-
-    public Boolean getIsDefault() {
-        return isDefault;
-    }
-
-    public void setIsDefault(Boolean isDefault) {
-        this.isDefault = isDefault;
     }
 }
