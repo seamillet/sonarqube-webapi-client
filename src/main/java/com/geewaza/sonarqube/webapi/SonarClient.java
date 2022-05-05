@@ -25,6 +25,13 @@ public interface SonarClient {
     ComponentsClient getComponentsClient();
 
     /**
+     * Get Duplications API Client
+     *
+     * @return DuplicationsClient
+     */
+    DuplicationsClient getDuplicationsClient();
+
+    /**
      * Get User API Client
      *
      * @return UserClient
@@ -121,4 +128,63 @@ public interface SonarClient {
      * @return ServerClient
      */
     QualityProfileClient getQualityProfileClient();
+
+    /**
+     * Get ProjectAnalyses API Client
+     *
+     * @return ProjectAnalysesClient
+     */
+    ProjectAnalysesClient getProjectAnalysesClient();
+    /**
+     * Get ProjectBadges API Client
+     *
+     * @return ProjectBadgesClient
+     */
+    ProjectBadgesClient getProjectBadgesClient();
+
+    /**
+     * Get ProjectBranches API Client
+     *
+     * @return ProjectBranchesClient
+     */
+    ProjectBranchesClient getProjectBranchesClient();
+    /**
+     * Get ProjectLinks API Client
+     *
+     * @return ProjectLinksClient
+     */
+    ProjectLinksClient getProjectLinksClient();
+    /**
+     * Get ProjectPullRequest API Client
+     *
+     * @return ProjectPullRequestClient
+     */
+    ProjectPullRequestsClient getProjectPullRequestClient();
+    /**
+     * Get ProjectTags API Client
+     *
+     * @return ProjectTagsClient
+     */
+    ProjectTagsClient getProjectTagsClient();
+
+    /**
+     * Get UserGroups API Client
+     *
+     * @return UserGroupsClient
+     */
+    UserGroupsClient getUserGroupsClient();
+
+    /**
+     * Get UpdateCenter API Client
+     *
+     * @return UpdateCenterClient
+     */
+    UpdateCenterClient getUpdateCenterClient();
+
+    /**
+     * Get Rules API Client
+     *
+     * @return RulesClient
+     */
+    RulesClient getRulesClient();
 }

@@ -8,18 +8,20 @@ import com.alibaba.fastjson.annotation.JSONField;
  * @date 2017/6/20
  */
 public class Group {
-    private Long id;
+    private String id;
     private String name;
     private String description;
     private Boolean selected;
     @JSONField(name = "default")
     private Boolean isDefault;
+    private Integer membersCount;
+    private String organization;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -53,5 +55,29 @@ public class Group {
 
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
+    }
+
+    public Boolean getDefault() {
+        return isDefault;
+    }
+
+    public void setDefault(Boolean aDefault) {
+        isDefault = aDefault;
+    }
+
+    public Integer getMembersCount() {
+        return membersCount;
+    }
+
+    public void setMembersCount(Integer membersCount) {
+        this.membersCount = membersCount;
+    }
+
+    public String getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(String organization) {
+        this.organization = organization;
     }
 }

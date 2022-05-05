@@ -44,22 +44,22 @@ public class SonarClientTest {
 |api/notifications|[x]|[ ]|
 |api/permissions|[x]|[ ]|
 |api/plugins|[x]|[ ]|
-|api/project_analyses|[ ]|[ ]|
-|api/project_badges|[ ]|[ ]|
-|api/project_branches|[ ]|[ ]|
-|api/project_links|[ ]|[ ]|
-|api/project_pull_requests|[ ]|[ ]|
-|api/project_tags|[ ]|[ ]|
+|api/project_analyses|[x]|[ ]|
+|api/project_badges|[x]|[ ]|
+|api/project_branches|[x]|[ ]|
+|api/project_links|[x]|[ ]|
+|api/project_pull_requests|[x]|[ ]|
+|api/project_tags|[x]|[ ]|
 |api/projects|[x]|[ ]|
 |api/qualitygates|[x]|[ ]|
 |api/qualityprofiles|[x]|[ ]|
-|api/rules|[ ]|[ ]|
+|api/rules|[x]|[ ]|
 |api/server|[x]|[ ]|
 |api/settings|[ ]|[ ]|
 |api/sources|[ ]|[ ]|
 |api/system|[x]|[ ]|
-|api/updatecenter|[ ]|[ ]|
-|api/user_groups|[ ]|[ ]|
+|api/updatecenter|[x]|[ ]|
+|api/user_groups|[x]|[ ]|
 |api/user_tokens|[x]|[ ]|
 |api/users|[x]|[ ]|
 |api/webhooks|[x]|[ ]|

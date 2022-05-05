@@ -16,6 +16,7 @@ public class SonarClientImpl implements SonarClient {
     private final AuthenticationClient authenticationClient;
     private final CeClient ceClient;
     private final ComponentsClient componentsClient;
+    private final DuplicationsClient duplicationsClient;
     private final UserClient userClient;
     private final MeasureClient measureClient;
     private final ProjectsClient projectsClient;
@@ -29,6 +30,15 @@ public class SonarClientImpl implements SonarClient {
     private final ServerClient serverClient;
     private final QualityGatesClient qualityGatesClient;
     private final QualityProfileClient qualityProfileClient;
+    private final ProjectAnalysesClient projectAnalysesClient;
+    private final ProjectBadgesClient projectBadgesClient;
+    private final ProjectBranchesClient projectBranchesClient;
+    private final ProjectLinksClient projectLinksClient;
+    private final ProjectPullRequestsClient projectPullRequestsClient;
+    private final ProjectTagsClient projectTagsClient;
+    private final UserGroupsClient userGroupsClient;
+    private final UpdateCenterClient updateCenterClient;
+    private final RulesClient rulesClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -51,6 +61,7 @@ public class SonarClientImpl implements SonarClient {
         this.authenticationClient = new AuthenticationClient(baseHttpClient);
         this.ceClient = new CeClient(baseHttpClient);
         this.componentsClient = new ComponentsClient(baseHttpClient);
+        this.duplicationsClient = new DuplicationsClient(baseHttpClient);
         this.userClient = new UserClient(baseHttpClient);
         this.measureClient = new MeasureClientImpl(baseHttpClient);
         this.projectsClient = new ProjectsClient(baseHttpClient);
@@ -64,6 +75,15 @@ public class SonarClientImpl implements SonarClient {
         this.serverClient = new ServerClient(baseHttpClient);
         this.qualityGatesClient = new QualityGatesClient(baseHttpClient);
         this.qualityProfileClient = new QualityProfileClient(baseHttpClient);
+        this.projectAnalysesClient = new ProjectAnalysesClient(baseHttpClient);
+        this.projectBadgesClient = new ProjectBadgesClient(baseHttpClient);
+        this.projectBranchesClient = new ProjectBranchesClient(baseHttpClient);
+        this.projectLinksClient = new ProjectLinksClient(baseHttpClient);
+        this.projectPullRequestsClient = new ProjectPullRequestsClient(baseHttpClient);
+        this.projectTagsClient = new ProjectTagsClient(baseHttpClient);
+        this.userGroupsClient = new UserGroupsClient(baseHttpClient);
+        this.updateCenterClient = new UpdateCenterClient(baseHttpClient);
+        this.rulesClient = new RulesClient(baseHttpClient);
     }
 
 
@@ -85,6 +105,16 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public ComponentsClient getComponentsClient() {
         return this.componentsClient;
+    }
+
+    /**
+     * Get Duplications API Client
+     *
+     * @return DuplicationsClient
+     */
+    @Override
+    public DuplicationsClient getDuplicationsClient() {
+        return this.duplicationsClient;
     }
 
     /**
@@ -225,5 +255,95 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public QualityProfileClient getQualityProfileClient() {
         return this.qualityProfileClient;
+    }
+
+    /**
+     * Get ProjectAnalyses API Client
+     *
+     * @return ProjectAnalysesClient
+     */
+    @Override
+    public ProjectAnalysesClient getProjectAnalysesClient() {
+        return this.projectAnalysesClient;
+    }
+
+    /**
+     * Get ProjectBadges API Client
+     *
+     * @return ProjectBadgesClient
+     */
+    @Override
+    public ProjectBadgesClient getProjectBadgesClient() {
+        return this.projectBadgesClient;
+    }
+
+    /**
+     * Get ProjectBranches API Client
+     *
+     * @return ProjectBranchesClient
+     */
+    @Override
+    public ProjectBranchesClient getProjectBranchesClient() {
+        return this.projectBranchesClient;
+    }
+
+    /**
+     * Get ProjectLinks API Client
+     *
+     * @return ProjectLinksClient
+     */
+    @Override
+    public ProjectLinksClient getProjectLinksClient() {
+        return this.projectLinksClient;
+    }
+
+    /**
+     * Get ProjectPullRequest API Client
+     *
+     * @return ProjectPullRequestClient
+     */
+    @Override
+    public ProjectPullRequestsClient getProjectPullRequestClient() {
+        return this.projectPullRequestsClient;
+    }
+
+    /**
+     * Get ProjectTags API Client
+     *
+     * @return ProjectTagsClient
+     */
+    @Override
+    public ProjectTagsClient getProjectTagsClient() {
+        return this.projectTagsClient;
+    }
+
+    /**
+     * Get UserGroups API Client
+     *
+     * @return UserGroupsClient
+     */
+    @Override
+    public UserGroupsClient getUserGroupsClient() {
+        return this.userGroupsClient;
+    }
+
+    /**
+     * Get UpdateCenter API Client
+     *
+     * @return UpdateCenterClient
+     */
+    @Override
+    public UpdateCenterClient getUpdateCenterClient() {
+        return this.updateCenterClient;
+    }
+
+    /**
+     * Get Rules API Client
+     *
+     * @return RulesClient
+     */
+    @Override
+    public RulesClient getRulesClient() {
+        return this.rulesClient;
     }
 }
