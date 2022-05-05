@@ -1,7 +1,6 @@
 package com.geewaza.sonarqube.webapi;
 
 import com.geewaza.sonarqube.webapi.api.*;
-import com.geewaza.sonarqube.webapi.client.CeClient;
 import com.geewaza.sonarqube.webapi.client.MeasureClient;
 import com.geewaza.sonarqube.webapi.client.SystemClient;
 
@@ -94,4 +93,11 @@ public interface SonarClient {
      * @return PermissionsClient
      */
     PermissionsClient getPermissionsClient();
+
+    /**
+     * Get Plugins API Client
+     *
+     * @return PluginsClient
+     */
+    PluginsClient getPluginsClient();
 }

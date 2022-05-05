@@ -6,7 +6,7 @@ package com.geewaza.sonarqube.webapi.model.system;
  * @author : wangheng
  * @date : 2022-05-03 01:12
  **/
-public class Plugin {
+public class PluginUpdate {
 
     private String key;
     private String name;
@@ -20,9 +20,7 @@ public class Plugin {
     private String implementationBuild;
     private Boolean editionBundled;
     private String termsAndConditionsUrl;
-    private String version;
-    private Release release;
-    private Update update;
+    private Update[] updates;
 
     public String getKey() {
         return key;
@@ -96,14 +94,6 @@ public class Plugin {
         this.termsAndConditionsUrl = termsAndConditionsUrl;
     }
 
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
-    }
-
     public String getHomepageUrl() {
         return homepageUrl;
     }
@@ -128,19 +118,11 @@ public class Plugin {
         this.implementationBuild = implementationBuild;
     }
 
-    public Release getRelease() {
-        return release;
+    public Update[] getUpdates() {
+        return updates;
     }
 
-    public void setRelease(Release release) {
-        this.release = release;
-    }
-
-    public Update getUpdate() {
-        return update;
-    }
-
-    public void setUpdate(Update update) {
-        this.update = update;
+    public void setUpdates(Update[] updates) {
+        this.updates = updates;
     }
 }

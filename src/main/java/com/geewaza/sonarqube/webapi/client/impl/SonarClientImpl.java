@@ -2,7 +2,9 @@ package com.geewaza.sonarqube.webapi.client.impl;
 
 import com.geewaza.sonarqube.webapi.SonarClient;
 import com.geewaza.sonarqube.webapi.api.*;
-import com.geewaza.sonarqube.webapi.client.*;
+import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.MeasureClient;
+import com.geewaza.sonarqube.webapi.client.SystemClient;
 
 import java.net.URI;
 
@@ -23,6 +25,7 @@ public class SonarClientImpl implements SonarClient {
     private final WebhooksClient webhooksClient;
     private final UserTokenClient userTokenClient;
     private final PermissionsClient permissionsClient;
+    private final PluginsClient pluginsClient;
 
     /**
      * SonarClientImpl constructor with token
@@ -43,7 +46,7 @@ public class SonarClientImpl implements SonarClient {
         BaseHttpClient baseHttpClient = new BaseHttpClient(uri, username, password);
 
         this.authenticationClient = new AuthenticationClient(baseHttpClient);
-        this.ceClient = new CeClientImpl(baseHttpClient);
+        this.ceClient = new CeClient(baseHttpClient);
         this.componentsClient = new ComponentsClient(baseHttpClient);
         this.userClient = new UserClient(baseHttpClient);
         this.measureClient = new MeasureClientImpl(baseHttpClient);
@@ -54,6 +57,7 @@ public class SonarClientImpl implements SonarClient {
         this.webhooksClient = new WebhooksClient(baseHttpClient);
         this.userTokenClient = new UserTokenClient(baseHttpClient);
         this.permissionsClient = new PermissionsClient(baseHttpClient);
+        this.pluginsClient = new PluginsClient(baseHttpClient);
     }
 
 
@@ -175,5 +179,15 @@ public class SonarClientImpl implements SonarClient {
     @Override
     public PermissionsClient getPermissionsClient() {
         return this.permissionsClient;
+    }
+
+    /**
+     * Get Plugins API Client
+     *
+     * @return PluginsClient
+     */
+    @Override
+    public PluginsClient getPluginsClient() {
+        return this.pluginsClient;
     }
 }

@@ -14,7 +14,7 @@ public class Upgrade {
     private Date releaseDate;
     private String changeLogUrl;
     private String downloadUrl;
-    private Plugins plugins;
+    private PluginInfo plugins;
 
     public String getVersion() {
         return version;
@@ -56,11 +56,11 @@ public class Upgrade {
         this.downloadUrl = downloadUrl;
     }
 
-    public Plugins getPlugins() {
+    public PluginInfo getPlugins() {
         return plugins;
     }
 
-    public void setPlugins(Plugins plugins) {
+    public void setPlugins(PluginInfo plugins) {
         this.plugins = plugins;
     }
 }
