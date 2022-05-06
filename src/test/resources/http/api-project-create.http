@@ -1,0 +1,10 @@
+POST http://172.16.21.91:9000/api/projects/create?project=test-001&name=test-001
+Content-Type: application/json
+Authorization: Basic dGVzdDpxd2VyQDEyMzQ=
+
+
+
+> {%
+client.log(response.body);
+%}
+

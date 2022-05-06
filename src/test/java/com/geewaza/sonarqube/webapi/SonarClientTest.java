@@ -1,7 +1,6 @@
 package com.geewaza.sonarqube.webapi;
 
 import com.alibaba.fastjson.JSONObject;
-import com.geewaza.sonarqube.webapi.client.SonarClientImpl;
 import com.geewaza.sonarqube.webapi.model.user.Groups;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,7 +24,7 @@ public class SonarClientTest {
 
     @Test
     public void initSonarClientWithUserPassword() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), USER, PASSWORD);
+        SonarClient client = new SonarClient(new URI(SERVER_URL), USER, PASSWORD);
         Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);
@@ -33,7 +32,7 @@ public class SonarClientTest {
 
     @Test
     public void initSonarClientWithToken() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), TOKEN);
+        SonarClient client = new SonarClient(new URI(SERVER_URL), TOKEN);
         Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);

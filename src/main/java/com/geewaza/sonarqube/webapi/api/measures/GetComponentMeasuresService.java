@@ -13,8 +13,8 @@ import java.io.IOException;
  * @author : wangheng
  * @date : 2022-05-03 22:52
  **/
-public class GetComponentService extends AbstractService<GetComponentService, ComponentMeasures> {
-    public GetComponentService(BaseHttpClient httpClient) {
+public class GetComponentMeasuresService extends AbstractService<GetComponentMeasuresService, ComponentMeasures> {
+    public GetComponentMeasuresService(BaseHttpClient httpClient) {
         super(httpClient);
     }
 
@@ -28,13 +28,13 @@ public class GetComponentService extends AbstractService<GetComponentService, Co
         return doGet("api/measures/component", ComponentMeasures.class);
     }
 
-    public GetComponentService additionalFields(String... additionalFields) {
+    public GetComponentMeasuresService additionalFields(String... additionalFields) {
         return putCsvParam("additionalFields", additionalFields);
     }
-    public GetComponentService metricKeys(String... metricKeys) {
+    public GetComponentMeasuresService metricKeys(String... metricKeys) {
         return putCsvParam("metricKeys", metricKeys);
     }
-    public GetComponentService component(String component) {
+    public GetComponentMeasuresService component(String component) {
         return put("component", component);
     }
 }

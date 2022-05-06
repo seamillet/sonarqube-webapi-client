@@ -1,7 +1,7 @@
 package com.geewaza.sonarqube.webapi.client.api;
 
 import com.geewaza.sonarqube.webapi.api.measures.GetComponentMeasuresTreeService;
-import com.geewaza.sonarqube.webapi.api.measures.GetComponentService;
+import com.geewaza.sonarqube.webapi.api.measures.GetComponentMeasuresService;
 import com.geewaza.sonarqube.webapi.api.measures.SearchMeasuresHistoryService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
 import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
@@ -16,8 +16,8 @@ public class MeasuresClient extends AbstractSonarClient {
     public MeasuresClient(BaseHttpClient httpClient) {
         super(httpClient);
     }
-    public GetComponentService getComponent() {
-        return new GetComponentService(this.httpClient);
+    public GetComponentMeasuresService getComponentMeasures() {
+        return new GetComponentMeasuresService(this.httpClient);
     }
     public GetComponentMeasuresTreeService getComponentMeasuresTree() {
         return new GetComponentMeasuresTreeService(this.httpClient);

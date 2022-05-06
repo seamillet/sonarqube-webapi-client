@@ -1,6 +1,5 @@
 package com.geewaza.sonarqube.webapi;
 
-import com.geewaza.sonarqube.webapi.client.SonarClientImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +17,7 @@ public class SonarServer {
 
     public SonarServer(URI serverUri, String username, String passwordOrToken) {
         this.logger = LoggerFactory.getLogger(this.getClass());
-        this.client = new SonarClientImpl(serverUri, username, passwordOrToken);
+        this.client = new SonarClient(serverUri, username, passwordOrToken);
     }
 
 //    /**

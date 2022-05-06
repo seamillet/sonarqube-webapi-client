@@ -157,9 +157,9 @@ public class BaseHttpClient {
         }
         CloseableHttpResponse response = null;
         try {
-            response = (CloseableHttpResponse) this.client.execute(httpPost);
+            response = (CloseableHttpResponse) this.client.execute(httpPost, this.localContext);
             HttpResponseValidator.validateResponse(response);
-            return EntityUtils.toString(response.getEntity());
+            return (response.getEntity() == null)? "null" : EntityUtils.toString(response.getEntity());
         } finally {
             if (null != response) {
                 EntityUtils.consume(response.getEntity());
