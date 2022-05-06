@@ -2,14 +2,12 @@ package com.geewaza.sonarqube.webapi.api;
 
 import com.alibaba.fastjson.JSONObject;
 import com.geewaza.sonarqube.webapi.SonarClient;
-import com.geewaza.sonarqube.webapi.client.impl.SonarClientImpl;
+import com.geewaza.sonarqube.webapi.client.SonarClientImpl;
 import com.geewaza.sonarqube.webapi.model.component.Components;
 import com.geewaza.sonarqube.webapi.model.component.ProjectResponse;
-import com.geewaza.sonarqube.webapi.model.user.Groups;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 

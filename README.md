@@ -55,8 +55,8 @@ public class SonarClientTest {
 |api/qualityprofiles|[x]|[ ]|
 |api/rules|[x]|[ ]|
 |api/server|[x]|[ ]|
-|api/settings|[ ]|[ ]|
-|api/sources|[ ]|[ ]|
+|api/settings|[x]|[ ]|
+|api/sources|[x]|[ ]|
 |api/system|[x]|[ ]|
 |api/updatecenter|[x]|[ ]|
 |api/user_groups|[x]|[ ]|

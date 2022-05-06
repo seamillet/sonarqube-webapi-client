@@ -1,8 +1,6 @@
 package com.geewaza.sonarqube.webapi;
 
-import com.geewaza.sonarqube.webapi.api.*;
-import com.geewaza.sonarqube.webapi.client.MeasureClient;
-import com.geewaza.sonarqube.webapi.client.SystemClient;
+import com.geewaza.sonarqube.webapi.client.api.*;
 
 /**
  *
@@ -39,25 +37,11 @@ public interface SonarClient {
     UserClient getUserClient();
 
     /**
-     * Get Measure API Client
-     *
-     * @return MeasureClient
-     */
-    MeasureClient getMeasureClient();
-
-    /**
      * Get Projects API Client
      *
      * @return ProjectClient
      */
     ProjectsClient getProjectsClient();
-
-    /**
-     * Get System API Client
-     *
-     * @return SystemClient
-     */
-    SystemClient getSystemClient();
 
     /**
      * Get Issues API Client
@@ -187,4 +171,56 @@ public interface SonarClient {
      * @return RulesClient
      */
     RulesClient getRulesClient();
+
+    /**
+     * Get Sources API Client
+     *
+     * @return SourcesClient
+     */
+    SourcesClient getSourcesClient();
+    /**
+     * Get Settings API Client
+     *
+     * @return SettingsClient
+     */
+    SettingsClient getSettingsClient();
+    /**
+     * Get Webservices API Client
+     *
+     * @return WebservicesClient
+     */
+    WebservicesClient getWebservicesClient();
+    /**
+     * Get Metrics API Client
+     *
+     * @return MetricsClient
+     */
+    MetricsClient getMetricsClient();
+
+    /**
+     * Get Measures API Client
+     *
+     * @return MeasuresClient
+     */
+    MeasuresClient getMeasuresClient();
+
+    /**
+     * Get Languages API Client
+     *
+     * @return LanguagesClient
+     */
+    LanguagesClient getLanguagesClient();
+
+    /**
+     * Get Favorite API Client
+     *
+     * @return FavoriteClient
+     */
+    FavoriteClient getFavoriteClient();
+    /**
+     * Get System API Client
+     *
+     * @return SystemClient
+     */
+    SystemClient getSystemClient();
 }

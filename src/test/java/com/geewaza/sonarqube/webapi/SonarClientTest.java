@@ -1,7 +1,7 @@
 package com.geewaza.sonarqube.webapi;
 
 import com.alibaba.fastjson.JSONObject;
-import com.geewaza.sonarqube.webapi.client.impl.SonarClientImpl;
+import com.geewaza.sonarqube.webapi.client.SonarClientImpl;
 import com.geewaza.sonarqube.webapi.model.user.Groups;
 import org.junit.Assert;
 import org.junit.Test;
