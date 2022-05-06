@@ -6,27 +6,30 @@
 ```java
 public class SonarClientTest {
 
-    private static final String SERVER_URL = "http://localhost:9000/";
+    private static final String SERVER_URL = "http://sonarhost:9000/";
     private static final String USER = "username";
     private static final String PASSWORD = "password";
     private static final String TOKEN = "access_token";
 
     @Test
-    public void initSonarClientWithUserPassword() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), USER, PASSWORD);
-        Groups groups = client.getUserClient().getUserGroups(USER, null, null, null, null);
-        System.out.println(JSONObject.toJSONString(groups));
-        Assert.assertNotNull(groups);
+    public void createProject_01() throws URISyntaxException {
+        String project = "test-002";
+        System.out.println("project=" + project);
+        SonarClient client = new SonarClient(new URI(SERVER_URL), USER, PASSWORD);
+        ProjectResponse result = client.getProjectsClient().createProject().name(project).project(project).execute();
+        System.out.println(JSONObject.toJSONString(result));
+        Assert.assertNotNull(result);
     }
 
     @Test
-    public void initSonarClientWithToken() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClientImpl(new URI(SERVER_URL), TOKEN);
-        Groups groups = client.getUserClient().getUserGroups(USER, null, null, null, null);
-        System.out.println(JSONObject.toJSONString(groups));
-        Assert.assertNotNull(groups);
+    public void createProject_02() throws URISyntaxException {
+        String project = "test-003";
+        System.out.println("project=" + project);
+        SonarClient client = new SonarClient(new URI(SERVER_URL), TOKEN);
+        ProjectResponse result = client.getProjectsClient().createProject().name(project).project(project).execute();
+        System.out.println(JSONObject.toJSONString(result));
+        Assert.assertNotNull(result);
     }
-
 }
 ```
 # TODO List
