@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.authentication.LoginAuthenticationServic
 import com.geewaza.sonarqube.webapi.api.authentication.LogoutAuthenticationService;
 import com.geewaza.sonarqube.webapi.api.authentication.ValidateAuthenticationService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

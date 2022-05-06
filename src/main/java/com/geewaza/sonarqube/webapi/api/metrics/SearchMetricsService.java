@@ -1,9 +1,8 @@
 package com.geewaza.sonarqube.webapi.api.metrics;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.measure.Metrics;
-import com.geewaza.sonarqube.webapi.model.webservice.WebserviceResponseExample;
 
 import java.io.IOException;
 

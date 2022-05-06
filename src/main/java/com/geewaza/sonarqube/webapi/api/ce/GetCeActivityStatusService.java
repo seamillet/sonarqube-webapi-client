@@ -1,12 +1,10 @@
 package com.geewaza.sonarqube.webapi.api.ce;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.ce.TaskStatus;
-import com.geewaza.sonarqube.webapi.model.ce.Tasks;
 
 import java.io.IOException;
-import java.util.Date;
 
 /**
  * Returns CE activity related metrics.

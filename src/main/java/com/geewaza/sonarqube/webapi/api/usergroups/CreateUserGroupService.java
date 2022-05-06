@@ -1,7 +1,7 @@
 package com.geewaza.sonarqube.webapi.api.usergroups;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.user.GroupResponse;
 
 import java.io.IOException;

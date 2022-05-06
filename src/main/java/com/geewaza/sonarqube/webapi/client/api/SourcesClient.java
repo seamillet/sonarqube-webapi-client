@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.sources.GetSourceRawService;
 import com.geewaza.sonarqube.webapi.api.sources.GetSourceScmService;
 import com.geewaza.sonarqube.webapi.api.sources.ShowSourceService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

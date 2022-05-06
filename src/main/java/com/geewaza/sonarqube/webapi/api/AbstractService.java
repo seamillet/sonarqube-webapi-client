@@ -1,6 +1,6 @@
 package com.geewaza.sonarqube.webapi.api;
 
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.SonarQubeException;
 import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;

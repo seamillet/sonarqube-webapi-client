@@ -1,9 +1,8 @@
 package com.geewaza.sonarqube.webapi.api.qualitygates;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.qualitygates.Condition;
-import com.geewaza.sonarqube.webapi.model.qualitygates.QualityGate;
 
 import java.io.IOException;
 

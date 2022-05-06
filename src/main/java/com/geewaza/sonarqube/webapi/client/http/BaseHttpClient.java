@@ -1,6 +1,5 @@
-package com.geewaza.sonarqube.webapi.client;
+package com.geewaza.sonarqube.webapi.client.http;
 
-import com.geewaza.sonarqube.webapi.client.authentication.PreemptiveAuth;
 import com.geewaza.sonarqube.webapi.util.HttpResponseValidator;
 import com.geewaza.sonarqube.webapi.util.HttpResponseWrapper;
 import org.apache.commons.lang3.StringUtils;

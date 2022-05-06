@@ -1,5 +1,7 @@
 package com.geewaza.sonarqube.webapi.client;
 
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
+
 /**
  * <p></p>
  *

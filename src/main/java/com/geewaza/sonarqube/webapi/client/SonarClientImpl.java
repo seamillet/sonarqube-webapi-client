@@ -2,6 +2,7 @@ package com.geewaza.sonarqube.webapi.client;
 
 import com.geewaza.sonarqube.webapi.SonarClient;
 import com.geewaza.sonarqube.webapi.client.api.*;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 import java.net.URI;
 

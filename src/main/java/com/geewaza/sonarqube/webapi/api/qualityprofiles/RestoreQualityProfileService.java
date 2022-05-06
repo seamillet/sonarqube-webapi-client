@@ -1,8 +1,7 @@
 package com.geewaza.sonarqube.webapi.api.qualityprofiles;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
-import com.geewaza.sonarqube.webapi.model.qualityprofiles.QualityProfileResponse;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 import java.io.IOException;
 

@@ -5,7 +5,7 @@ import com.geewaza.sonarqube.webapi.api.settings.ListDefinitionsService;
 import com.geewaza.sonarqube.webapi.api.settings.ResetDefinitionsService;
 import com.geewaza.sonarqube.webapi.api.settings.SetDefinitionService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

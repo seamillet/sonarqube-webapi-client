@@ -1,9 +1,8 @@
 package com.geewaza.sonarqube.webapi.api.rules;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.rules.RuleRepositories;
-import com.geewaza.sonarqube.webapi.model.rules.RuleResponse;
 
 import java.io.IOException;
 

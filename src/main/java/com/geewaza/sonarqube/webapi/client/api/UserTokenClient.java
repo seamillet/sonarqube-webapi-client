@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.usertokens.GenerateUserTokensService;
 import com.geewaza.sonarqube.webapi.api.usertokens.RevokeUserTokensService;
 import com.geewaza.sonarqube.webapi.api.usertokens.SearchUserTokensService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

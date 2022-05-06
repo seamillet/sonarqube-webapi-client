@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.notifications.AddNotificationsService;
 import com.geewaza.sonarqube.webapi.api.notifications.ListNotificationsService;
 import com.geewaza.sonarqube.webapi.api.notifications.RemoveNotificationsService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

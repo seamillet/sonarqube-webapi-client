@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.measures.GetComponentMeasuresTreeService
 import com.geewaza.sonarqube.webapi.api.measures.GetComponentService;
 import com.geewaza.sonarqube.webapi.api.measures.SearchMeasuresHistoryService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

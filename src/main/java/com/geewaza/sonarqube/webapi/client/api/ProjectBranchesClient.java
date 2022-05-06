@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.projectbranches.DeleteProjectBranchesSer
 import com.geewaza.sonarqube.webapi.api.projectbranches.ListProjectBranchesService;
 import com.geewaza.sonarqube.webapi.api.projectbranches.RenameProjectBranchesService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

@@ -1,11 +1,10 @@
 package com.geewaza.sonarqube.webapi.api.permissions;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.permissions.PermissionTemplateResponse;
 
 import java.io.IOException;
-import java.util.Date;
 
 /**
  * <p></p>

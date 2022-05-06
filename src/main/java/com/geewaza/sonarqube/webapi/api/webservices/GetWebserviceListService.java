@@ -1,8 +1,7 @@
 package com.geewaza.sonarqube.webapi.api.webservices;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
-import com.geewaza.sonarqube.webapi.model.webhooks.Deliveries;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.webservice.Webservices;
 
 import java.io.IOException;

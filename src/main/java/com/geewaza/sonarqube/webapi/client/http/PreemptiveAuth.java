@@ -1,4 +1,4 @@
-package com.geewaza.sonarqube.webapi.client.authentication;
+package com.geewaza.sonarqube.webapi.client.http;
 
 import org.apache.http.HttpException;
 import org.apache.http.HttpHost;

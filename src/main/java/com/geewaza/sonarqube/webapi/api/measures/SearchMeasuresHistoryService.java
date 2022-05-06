@@ -1,9 +1,8 @@
 package com.geewaza.sonarqube.webapi.api.measures;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 import com.geewaza.sonarqube.webapi.model.measure.ComponentMeasuresHistory;
-import com.geewaza.sonarqube.webapi.model.measure.ComponentMeasuresTree;
 
 import java.io.IOException;
 import java.util.Date;

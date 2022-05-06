@@ -4,7 +4,7 @@ import com.geewaza.sonarqube.webapi.api.projectlinks.CreateProjectLinkService;
 import com.geewaza.sonarqube.webapi.api.projectlinks.DeleteProjectLinkService;
 import com.geewaza.sonarqube.webapi.api.projectlinks.SearchProjectLinksService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>

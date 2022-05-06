@@ -3,7 +3,7 @@ package com.geewaza.sonarqube.webapi.client.api;
 import com.geewaza.sonarqube.webapi.api.metrics.GetMetricsTypesService;
 import com.geewaza.sonarqube.webapi.api.metrics.SearchMetricsService;
 import com.geewaza.sonarqube.webapi.client.AbstractSonarClient;
-import com.geewaza.sonarqube.webapi.client.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 /**
  * <p></p>
