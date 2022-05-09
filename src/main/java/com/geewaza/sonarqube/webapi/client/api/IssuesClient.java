@@ -52,8 +52,8 @@ public class IssuesClient extends AbstractSonarClient {
         return new PostBulkChangeService(this.httpClient);
     }
 
-    public SearchService search() {
-        return new SearchService(this.httpClient);
+    public SearchIssuesService searchIssues() {
+        return new SearchIssuesService(this.httpClient);
     }
 
     public SetSeverityService setSeverity() {

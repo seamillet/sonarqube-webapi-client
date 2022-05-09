@@ -1,4 +1,4 @@
-package com.geewaza.sonarqube.webapi.model.rules;
+package com.geewaza.sonarqube.webapi.model.issue;
 
 import com.geewaza.sonarqube.webapi.model.system.Value;
 
@@ -6,18 +6,20 @@ import com.geewaza.sonarqube.webapi.model.system.Value;
  * <p></p>
  *
  * @author : wangheng
- * @date : 2022-05-05 18:22
+ * @date : 2022-05-09 18:54
  **/
 public class Facet {
-    private String name;
+
+    private String property;
+
     private Value[] values;
 
-    public String getName() {
-        return name;
+    public String getProperty() {
+        return property;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProperty(String property) {
+        this.property = property;
     }
 
     public Value[] getValues() {

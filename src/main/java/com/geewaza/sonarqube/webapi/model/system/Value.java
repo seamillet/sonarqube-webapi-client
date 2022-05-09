@@ -1,4 +1,4 @@
-package com.geewaza.sonarqube.webapi.model.rules;
+package com.geewaza.sonarqube.webapi.model.system;
 
 /**
  * <p></p>

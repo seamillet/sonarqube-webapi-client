@@ -18,15 +18,15 @@ import java.net.URISyntaxException;
  **/
 public class ProjectsClientTest {
 
-    private static final String SERVER_URL = "http://172.16.21.91:9000/";
-    private static final String USER = "welink";
-    private static final String PASSWORD = "qwer@1234";
-    private static final String TOKEN = "48bd96fe7192f44bbc200123c0f6db9bcfd20a3e";
+//    private static final String SERVER_URL = "http://172.16.21.91:9000/";
+//    private static final String USER = "welink";
+//    private static final String PASSWORD = "qwer@1234";
+//    private static final String TOKEN = "48bd96fe7192f44bbc200123c0f6db9bcfd20a3e";
 
-//    private static final String SERVER_URL = "http://localhost:9000/";
-//    private static final String USER = "geewaza";
-//    private static final String PASSWORD = "VaMD5AYR@_L2LB*";
-//    private static final String TOKEN = " ed97e566166633cf858e582042cf4a37d03195a5";
+    private static final String SERVER_URL = "http://localhost:9000/";
+    private static final String USER = "geewaza";
+    private static final String PASSWORD = "VaMD5AYR@_L2LB*";
+    private static final String TOKEN = " ed97e566166633cf858e582042cf4a37d03195a5";
 
 
     @Test

@@ -15,8 +15,8 @@ import java.util.Date;
  * @author : wangheng
  * @date : 2022-05-03 19:54
  **/
-public class SearchService extends AbstractService<SearchService, Issues> {
-    public SearchService(BaseHttpClient httpClient) {
+public class SearchIssuesService extends AbstractService<SearchIssuesService, Issues> {
+    public SearchIssuesService(BaseHttpClient httpClient) {
         super(httpClient);
     }
 
@@ -30,119 +30,119 @@ public class SearchService extends AbstractService<SearchService, Issues> {
         return doGet("api/issues/search", Issues.class);
     }
 
-    public SearchService additionalFields(String... additionalFields) {
+    public SearchIssuesService additionalFields(String... additionalFields) {
         return putCsvParam("additionalFields", additionalFields);
     }
 
-    public SearchService asc(Boolean asc) {
+    public SearchIssuesService asc(Boolean asc) {
         return put("asc", asc);
     }
 
-    public SearchService assigned(Boolean assigned) {
+    public SearchIssuesService assigned(Boolean assigned) {
         return put("assigned", assigned);
     }
 
-    public SearchService assignees(String... assignees) {
+    public SearchIssuesService assignees(String... assignees) {
         return putCsvParam("assignees", assignees);
     }
 
-    public SearchService author(String author) {
+    public SearchIssuesService author(String author) {
         return put("author", author);
     }
 
-    public SearchService componentKeys(String... componentKeys) {
+    public SearchIssuesService componentKeys(String... componentKeys) {
         return putCsvParam("componentKeys", componentKeys);
     }
 
-    public SearchService createdAfter(Date createdAfter) {
+    public SearchIssuesService createdAfter(Date createdAfter) {
         return put("createdAfter", createdAfter);
     }
 
-    public SearchService createdAt(Date createdAt) {
+    public SearchIssuesService createdAt(Date createdAt) {
         return put("createdAt", createdAt);
     }
 
-    public SearchService createdBefore(Date createdBefore) {
+    public SearchIssuesService createdBefore(Date createdBefore) {
         return put("createdBefore", createdBefore);
     }
 
-    public SearchService createdInLast(String createdInLast) {
+    public SearchIssuesService createdInLast(String createdInLast) {
         return put("createdInLast", createdInLast);
     }
 
-    public SearchService cwe(String... cwe) {
+    public SearchIssuesService cwe(String... cwe) {
         return putCsvParam("cwe", cwe);
     }
 
-    public SearchService facets(String... facets) {
+    public SearchIssuesService facets(String... facets) {
         return putCsvParam("facets", facets);
     }
 
-    public SearchService issues(String... issues) {
+    public SearchIssuesService issues(String... issues) {
         return putCsvParam("issues", issues);
     }
 
-    public SearchService languages(String... languages) {
+    public SearchIssuesService languages(String... languages) {
         return putCsvParam("languages", languages);
     }
 
-    public SearchService onComponentOnly(Boolean onComponentOnly) {
+    public SearchIssuesService onComponentOnly(Boolean onComponentOnly) {
         return put("onComponentOnly", onComponentOnly);
     }
 
-    public SearchService owaspTop10(String... owaspTop10) {
+    public SearchIssuesService owaspTop10(String... owaspTop10) {
         return putCsvParam("owaspTop10", owaspTop10);
     }
 
-    public SearchService p(Integer p) {
+    public SearchIssuesService p(Integer p) {
         return put("p", p);
     }
 
-    public SearchService ps(Integer ps) {
+    public SearchIssuesService ps(Integer ps) {
         return put("ps", ps);
     }
 
-    public SearchService resolutions(String... resolutions) {
+    public SearchIssuesService resolutions(String... resolutions) {
         return putCsvParam("resolutions", resolutions);
     }
 
-    public SearchService resolved(Boolean resolved) {
+    public SearchIssuesService resolved(Boolean resolved) {
         return put("resolved", resolved);
     }
 
-    public SearchService rules(String... rules) {
+    public SearchIssuesService rules(String... rules) {
         return putCsvParam("rules", rules);
     }
 
-    public SearchService s(String s) {
+    public SearchIssuesService s(String s) {
         return put("s", s);
     }
 
-    public SearchService sansTop25(String... sansTop25) {
+    public SearchIssuesService sansTop25(String... sansTop25) {
         return putCsvParam("sansTop25", sansTop25);
     }
 
-    public SearchService severities(String... severities) {
+    public SearchIssuesService severities(String... severities) {
         return putCsvParam("severities", severities);
     }
 
-    public SearchService sinceLeakPeriod(Boolean sinceLeakPeriod) {
+    public SearchIssuesService sinceLeakPeriod(Boolean sinceLeakPeriod) {
         return put("sinceLeakPeriod", sinceLeakPeriod);
     }
 
-    public SearchService sonarsourceSecurity(String... sonarsourceSecurity) {
+    public SearchIssuesService sonarsourceSecurity(String... sonarsourceSecurity) {
         return putCsvParam("sonarsourceSecurity", sonarsourceSecurity);
     }
 
-    public SearchService statuses(String... statuses) {
+    public SearchIssuesService statuses(String... statuses) {
         return putCsvParam("statuses", statuses);
     }
 
-    public SearchService tags(String... tags) {
+    public SearchIssuesService tags(String... tags) {
         return putCsvParam("tags", tags);
     }
 
-    public SearchService types(String... types) {
+    public SearchIssuesService types(String... types) {
         return putCsvParam("types", types);
     }
 }

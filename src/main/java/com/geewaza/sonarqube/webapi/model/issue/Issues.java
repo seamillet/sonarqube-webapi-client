@@ -9,13 +9,23 @@ import com.geewaza.sonarqube.webapi.model.Paging;
  * @date : 2022-05-03 21:27
  **/
 public class Issues extends Paging {
-    private Issue[] issues;
+    private IssueInfo[] issues;
 
-    public Issue[] getIssues() {
+    private Facet[] facets;
+
+    public IssueInfo[] getIssues() {
         return issues;
     }
 
-    public void setIssues(Issue[] issues) {
+    public void setIssues(IssueInfo[] issues) {
         this.issues = issues;
+    }
+
+    public Facet[] getFacets() {
+        return facets;
+    }
+
+    public void setFacets(Facet[] facets) {
+        this.facets = facets;
     }
 }
