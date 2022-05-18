@@ -28,6 +28,12 @@ public class GetCeActivityStatusService extends AbstractService<GetCeActivitySta
         return doGet("api/ce/activity_status", TaskStatus.class);
     }
 
+    /**
+     * Id of the component (project) to filter on
+     *
+     * @param componentId   Example value : AU-TpxcA-iU5OvuD2FL0
+     * @return GetCeActivityStatusService
+     */
     public GetCeActivityStatusService componentId(String componentId) {
         return put("componentId", componentId);
     }

@@ -27,10 +27,22 @@ public class LoginAuthenticationService extends AbstractService<LoginAuthenticat
         return true;
     }
 
+    /**
+     * Login of the user
+     *
+     * @param login Login of the user
+     * @return  LoginAuthenticationService
+     */
     public LoginAuthenticationService login(String login) {
         return put("login", login);
     }
 
+    /**
+     * Password of the user
+     *
+     * @param password  Password of the user
+     * @return  LoginAuthenticationService
+     */
     public LoginAuthenticationService password(String password) {
         return put("password", password);
     }
