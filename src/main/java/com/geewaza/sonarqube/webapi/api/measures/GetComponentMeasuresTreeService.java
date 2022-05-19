@@ -37,6 +37,16 @@ public class GetComponentMeasuresTreeService extends AbstractService<GetComponen
         return put("asc", asc);
     }
 
+    /**
+     * Branch key. Not available in the community edition.
+     *
+     * @param branch    Example value:feature/my_branch
+     * @return  GetComponentMeasuresService
+     */
+    public GetComponentMeasuresTreeService branch(String branch) {
+        return put("branch", branch);
+    }
+
     public GetComponentMeasuresTreeService component(String component) {
         return put("component", component);
     }
@@ -64,6 +74,16 @@ public class GetComponentMeasuresTreeService extends AbstractService<GetComponen
     public GetComponentMeasuresTreeService ps(Integer ps) {
         return put("ps", ps);
     }
+
+    /**
+     * Pull request id. Not available in the community edition.
+     * @param pullRequest   Example value:5461
+     * @return  GetComponentMeasuresService
+     */
+    public GetComponentMeasuresTreeService pullRequest(String pullRequest) {
+        return put("pullRequest", pullRequest);
+    }
+
 
     public GetComponentMeasuresTreeService q(String q) {
         return put("q", q);

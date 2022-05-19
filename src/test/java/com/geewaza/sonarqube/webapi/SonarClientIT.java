@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
  * @author : wangheng
  * @date : 2022-04-27 17:27
  **/
-public class SonarClientTest {
+public class SonarClientIT {
 
     private static final String SERVER_URL = "http://localhost:9000/";
     private static final String USER = "geewaza";

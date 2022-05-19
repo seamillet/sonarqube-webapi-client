@@ -27,6 +27,7 @@ public class Component {
     private String visibility;
     private String organization;
     private Measures[] measures;
+    private Boolean needIssueSync;
 
     public String getId() {
         return id;
@@ -130,5 +131,13 @@ public class Component {
 
     public void setMeasures(Measures[] measures) {
         this.measures = measures;
+    }
+
+    public Boolean getNeedIssueSync() {
+        return needIssueSync;
+    }
+
+    public void setNeedIssueSync(Boolean needIssueSync) {
+        this.needIssueSync = needIssueSync;
     }
 }

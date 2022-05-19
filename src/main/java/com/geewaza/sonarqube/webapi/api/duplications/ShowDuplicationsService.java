@@ -27,6 +27,12 @@ public class ShowDuplicationsService extends AbstractService<ShowDuplicationsSer
         return doGet("api/duplications/show", Duplications.class);
     }
 
+    /**
+     * File key
+     *
+     * @param key   Example value:my_project:/src/foo/Bar.php
+     * @return  ShowDuplicationsService
+     */
     public ShowDuplicationsService key(String key) {
         return put("key", key);
     }

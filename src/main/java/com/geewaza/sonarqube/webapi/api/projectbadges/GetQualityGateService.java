@@ -26,7 +26,12 @@ public class GetQualityGateService extends AbstractService<GetQualityGateService
     protected String doExecute() throws IOException {
         return doGet("api/project_badges/quality_gate");
     }
-
+    /**
+     * Branch key. Not available in the community edition.
+     *
+     * @param branch    Example value:feature/my_branch
+     * @return  GetComponentMeasuresService
+     */
     public GetQualityGateService branch(String branch) {
         return put("branch", branch);
     }

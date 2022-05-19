@@ -16,23 +16,23 @@ import java.net.URISyntaxException;
  * @author : wangheng
  * @date : 2022-05-03 23:39
  **/
-public class ProjectsClientTest {
+public class ProjectsClientIT {
 
-//    private static final String SERVER_URL = "http://172.16.21.91:9000/";
-//    private static final String USER = "welink";
-//    private static final String PASSWORD = "qwer@1234";
-//    private static final String TOKEN = "48bd96fe7192f44bbc200123c0f6db9bcfd20a3e";
+    private static final String SERVER_URL = "http://10.18.104.127:9000/";
+    private static final String USER = "welink";
+    private static final String PASSWORD = "qwer1234";
+    private static final String TOKEN = "629973df7b9089d7bbbb89f848f0317f5b9f3702";
 
-    private static final String SERVER_URL = "http://localhost:9000/";
-    private static final String USER = "geewaza";
-    private static final String PASSWORD = "VaMD5AYR@_L2LB*";
-    private static final String TOKEN = " ed97e566166633cf858e582042cf4a37d03195a5";
+//    private static final String SERVER_URL = "http://localhost:9000/";
+//    private static final String USER = "geewaza";
+//    private static final String PASSWORD = "VaMD5AYR@_L2LB*";
+//    private static final String TOKEN = " ed97e566166633cf858e582042cf4a37d03195a5";
 
 
     @Test
     public void createProject_01() throws URISyntaxException {
 //        String project = "test-" + ToolMethods.getRandomCode(4);
-        String project = "test-002";
+        String project = "springboot-web-multi-module-demo01";
         System.out.println("project=" + project);
         SonarClient client = new SonarClient(new URI(SERVER_URL), USER, PASSWORD);
         ProjectResponse result = client.getProjectsClient().createProject().name(project).project(project).execute();

@@ -17,7 +17,7 @@ import java.util.List;
  * @author : wangheng
  * @date : 2022-05-06 14:42
  **/
-public class MeasuresClientTest {
+public class MeasuresClientIT {
 
     private static final String SERVER_URL = "http://172.16.21.91:9000/";
     private static final String USER = "welink";

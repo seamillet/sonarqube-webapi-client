@@ -30,6 +30,23 @@ public class SearchMeasuresHistoryService extends AbstractService<SearchMeasures
     protected ComponentMeasuresHistory doExecute() throws IOException {
         return doGet("api/measures/search_history", ComponentMeasuresHistory.class);
     }
+    /**
+     * Branch key. Not available in the community edition.
+     *
+     * @param branch    Example value:feature/my_branch
+     * @return  GetComponentMeasuresService
+     */
+    public SearchMeasuresHistoryService branch(String branch) {
+        return put("branch", branch);
+    }
+    /**
+     * Pull request id. Not available in the community edition.
+     * @param pullRequest   Example value:5461
+     * @return  GetComponentMeasuresService
+     */
+    public SearchMeasuresHistoryService pullRequest(String pullRequest) {
+        return put("pullRequest", pullRequest);
+    }
 
     public SearchMeasuresHistoryService component(String component) {
         return put("component", component);

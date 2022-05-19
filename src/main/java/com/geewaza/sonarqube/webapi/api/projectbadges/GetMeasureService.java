@@ -1,6 +1,7 @@
 package com.geewaza.sonarqube.webapi.api.projectbadges;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
+import com.geewaza.sonarqube.webapi.api.measures.SearchMeasuresHistoryService;
 import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
 
 import java.io.IOException;
@@ -27,6 +28,12 @@ public class GetMeasureService extends AbstractService<GetMeasureService, String
         return doGet("api/project_badges/measure");
     }
 
+    /**
+     * Branch key. Not available in the community edition.
+     *
+     * @param branch    Example value:feature/my_branch
+     * @return  GetComponentMeasuresService
+     */
     public GetMeasureService branch(String branch) {
         return put("branch", branch);
     }

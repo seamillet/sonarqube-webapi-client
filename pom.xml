@@ -6,7 +6,7 @@
 
     <groupId>com.geewaza.sonarqube</groupId>
     <artifactId>sonarqube-api-client</artifactId>
-    <version>7.9.1-SNAPSHOT</version>
+    <version>7.9.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -34,7 +34,19 @@
 
     <issueManagement></issueManagement>
     <scm></scm>
-    <distributionManagement></distributionManagement>
+    <!-- 配置部署的远程仓库 -->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>welink-repo</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://10.18.104.127:5001/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>welink-repo</id>
+            <name>Nexus Release Repository</name>
+            <url>http://10.18.104.127:5001/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <licenses></licenses>
 
     <dependencies>

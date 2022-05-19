@@ -16,7 +16,7 @@ import java.net.URISyntaxException;
  * @author : wangheng
  * @date : 2022-05-09 17:25
  **/
-public class IssuesClientTest {
+public class IssuesClientIT {
 
 //
     private static final String SERVER_URL = "http://172.16.21.91:9000/";

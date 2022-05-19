@@ -50,6 +50,10 @@ public class SearchIssuesService extends AbstractService<SearchIssuesService, Is
         return put("author", author);
     }
 
+    public SearchIssuesService branch(String branch) {
+        return put("branch", branch);
+    }
+
     public SearchIssuesService componentKeys(String... componentKeys) {
         return putCsvParam("componentKeys", componentKeys);
     }
@@ -100,6 +104,15 @@ public class SearchIssuesService extends AbstractService<SearchIssuesService, Is
 
     public SearchIssuesService ps(Integer ps) {
         return put("ps", ps);
+    }
+
+    /**
+     * Pull request id. Not available in the community edition.
+     * @param pullRequest   Example value:5461
+     * @return  SearchIssuesService
+     */
+    public SearchIssuesService pullRequest(String pullRequest) {
+        return put("pullRequest", pullRequest);
     }
 
     public SearchIssuesService resolutions(String... resolutions) {
