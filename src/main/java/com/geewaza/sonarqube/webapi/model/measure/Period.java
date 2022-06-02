@@ -16,6 +16,8 @@ public class Period {
     private Date date;
     private String parameter;
     private Integer index;
+    private String value;
+    private Boolean bestValue;
 
     public String getMode() {
         return mode;
@@ -47,5 +49,21 @@ public class Period {
 
     public void setIndex(Integer index) {
         this.index = index;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public Boolean getBestValue() {
+        return bestValue;
+    }
+
+    public void setBestValue(Boolean bestValue) {
+        this.bestValue = bestValue;
     }
 }

@@ -37,28 +37,28 @@ public class SonarClientTest {
 |:---|---|---|
 |api/authentication|[x]|[ ]|
 |api/ce|[x]|[ ]|
-|api/components|[x]|[ ]|
+|api/components|[x]|[-]|
 |api/duplications|[x]|[ ]|
 |api/favorites|[x]|[ ]|
-|api/issues|[x]|[ ]|
+|api/issues|[x]|[-]|
 |api/languages|[x]|[ ]|
-|api/measures|[x]|[ ]|
+|api/measures|[x]|[-]|
 |api/metrics|[x]|[ ]|
 |api/notifications|[x]|[ ]|
 |api/permissions|[x]|[ ]|
 |api/plugins|[x]|[ ]|
 |api/project_analyses|[x]|[ ]|
 |api/project_badges|[x]|[ ]|
-|api/project_branches|[x]|[ ]|
+|api/project_branches|[x]|[-]|
 |api/project_links|[x]|[ ]|
 |api/project_pull_requests|[x]|[ ]|
 |api/project_tags|[x]|[ ]|
-|api/projects|[x]|[ ]|
+|api/projects|[x]|[-]|
 |api/qualitygates|[x]|[ ]|
 |api/qualityprofiles|[x]|[ ]|
 |api/rules|[x]|[ ]|
 |api/server|[x]|[ ]|
-|api/settings|[x]|[ ]|
+|api/settings|[x]|[-]|
 |api/sources|[x]|[ ]|
 |api/system|[x]|[ ]|
 |api/updatecenter|[x]|[ ]|

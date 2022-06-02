@@ -25,7 +25,7 @@ public class ListDefinitionsService extends AbstractService<ListDefinitionsServi
 
     @Override
     protected String[] requiredParam() {
-        return new String[] {"key"};
+        return new String[0];
     }
 
     @Override
@@ -33,6 +33,12 @@ public class ListDefinitionsService extends AbstractService<ListDefinitionsServi
         return doGet("api/settings/list_definitions", Definitions.class);
     }
 
+    /**
+     * Component key
+     *
+     * @param component Example value: my_project
+     * @return GetDefinitionValuesService
+     */
     public ListDefinitionsService component(String component) {
         return put("component", component);
     }

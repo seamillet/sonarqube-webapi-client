@@ -30,9 +30,21 @@ public class ResetDefinitionsService extends AbstractService<ResetDefinitionsSer
         doPost("api/settings/reset");
         return true;
     }
+    /**
+     * List of setting keys
+     *
+     * @param keys Example value:sonar.test.inclusions,sonar.exclusions
+     * @return GetDefinitionValuesService
+     */
     public ResetDefinitionsService keys(String... keys) {
         return putCsvParam("keys", keys);
     }
+    /**
+     * Component key
+     *
+     * @param component Example value: my_project
+     * @return GetDefinitionValuesService
+     */
     public ResetDefinitionsService component(String component) {
         return put("component", component);
     }

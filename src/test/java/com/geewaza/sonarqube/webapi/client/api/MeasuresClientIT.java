@@ -1,14 +1,12 @@
 package com.geewaza.sonarqube.webapi.client.api;
 
 import com.alibaba.fastjson.JSONObject;
-import com.geewaza.sonarqube.webapi.SonarClient;
+import com.geewaza.sonarqube.webapi.SonarIT;
 import com.geewaza.sonarqube.webapi.ToolMethods;
 import com.geewaza.sonarqube.webapi.model.measure.ComponentMeasures;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.List;
 
 /**
@@ -17,15 +15,10 @@ import java.util.List;
  * @author : wangheng
  * @date : 2022-05-06 14:42
  **/
-public class MeasuresClientIT {
-
-    private static final String SERVER_URL = "http://172.16.21.91:9000/";
-    private static final String USER = "welink";
-    private static final String PASSWORD = "qwer@1234";
-    private static final String TOKEN = "48bd96fe7192f44bbc200123c0f6db9bcfd20a3e";
+public class MeasuresClientIT extends SonarIT {
 
     @Test
-    public void getComponentMeasuresService_01() throws URISyntaxException {
+    public void getComponentMeasuresService_01() {
         String project = "we-link";
         List<String> metricKeys = ToolMethods.toStringList("new_technical_debt,blocker_violations,bugs,classes" +
                 ",code_smells,cognitive_complexity,comment_lines,comment_lines_density,branch_coverage" +
@@ -45,8 +38,7 @@ public class MeasuresClientIT {
                 ",statements,sqale_index,sqale_debt_ratio,new_sqale_debt_ratio,uncovered_conditions" +
                 ",new_uncovered_conditions,uncovered_lines,new_uncovered_lines,test_execution_time,test_errors" +
                 ",test_failures,tests,test_success_density,vulnerabilities,wont_fix_issues");
-        SonarClient sonarClient = new SonarClient(new URI(SERVER_URL), USER, PASSWORD);
-        ComponentMeasures result = sonarClient.getMeasuresClient().getComponentMeasures()
+        ComponentMeasures result = client.getMeasuresClient().getComponentMeasures()
                 .component(project).metricKeys(metricKeys.toArray(new String[]{})).execute();
         System.out.println(JSONObject.toJSONString(result));
         Assert.assertNotNull(result);
@@ -55,7 +47,7 @@ public class MeasuresClientIT {
 
 
     @Test
-    public void getComponentMeasuresService_02() throws URISyntaxException {
+    public void getComponentMeasuresService_02() {
         String project = "we-link";
         List<String> metricKeys = ToolMethods.toStringList("new_technical_debt,blocker_violations,bugs,classes" +
                 ",code_smells,cognitive_complexity,comment_lines,comment_lines_density,branch_coverage" +
@@ -75,8 +67,7 @@ public class MeasuresClientIT {
                 ",statements,sqale_index,sqale_debt_ratio,new_sqale_debt_ratio,uncovered_conditions" +
                 ",new_uncovered_conditions,uncovered_lines,new_uncovered_lines,test_execution_time,test_errors" +
                 ",test_failures,tests,test_success_density,vulnerabilities,wont_fix_issues");
-        SonarClient sonarClient = new SonarClient(new URI(SERVER_URL), TOKEN);
-        ComponentMeasures result = sonarClient.getMeasuresClient().getComponentMeasures()
+        ComponentMeasures result = client.getMeasuresClient().getComponentMeasures()
                 .component(project).metricKeys(metricKeys.toArray(new String[]{})).execute();
         System.out.println(JSONObject.toJSONString(result));
         Assert.assertNotNull(result);
