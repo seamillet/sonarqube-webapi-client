@@ -1,5 +1,6 @@
 package com.geewaza.sonarqube.webapi.client.api;
 
+import com.geewaza.sonarqube.webapi.api.sources.GetSourceLinesService;
 import com.geewaza.sonarqube.webapi.api.sources.GetSourceRawService;
 import com.geewaza.sonarqube.webapi.api.sources.GetSourceScmService;
 import com.geewaza.sonarqube.webapi.api.sources.ShowSourceService;
@@ -24,5 +25,8 @@ public class SourcesClient extends AbstractSonarClient {
     }
     public ShowSourceService showSource() {
         return new ShowSourceService(this.httpClient);
+    }
+    public GetSourceLinesService getSourceLines() {
+        return new GetSourceLinesService(this.httpClient);
     }
 }
