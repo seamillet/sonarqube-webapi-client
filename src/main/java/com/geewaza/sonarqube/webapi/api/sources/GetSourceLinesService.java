@@ -2,6 +2,7 @@ package com.geewaza.sonarqube.webapi.api.sources;
 
 import com.geewaza.sonarqube.webapi.api.AbstractService;
 import com.geewaza.sonarqube.webapi.client.http.BaseHttpClient;
+import com.geewaza.sonarqube.webapi.model.sources.Sources;
 
 import java.io.IOException;
 
@@ -18,7 +19,7 @@ import java.io.IOException;
  * Number of conditions covered by tests
  * Whether the line is new
  **/
-public class GetSourceLinesService extends AbstractService<GetSourceLinesService, String> {
+public class GetSourceLinesService extends AbstractService<GetSourceLinesService, Sources> {
     public GetSourceLinesService(BaseHttpClient httpClient) {
         super(httpClient);
     }
@@ -29,8 +30,8 @@ public class GetSourceLinesService extends AbstractService<GetSourceLinesService
     }
 
     @Override
-    protected String doExecute() throws IOException {
-        return doGet("api/sources/lines");
+    protected Sources doExecute() throws IOException {
+        return doGet("api/sources/lines", Sources.class);
     }
 
     /**
