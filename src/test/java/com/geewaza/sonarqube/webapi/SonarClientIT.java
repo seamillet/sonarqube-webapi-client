@@ -6,7 +6,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
@@ -15,24 +14,17 @@ import java.net.URISyntaxException;
  * @author : wangheng
  * @date : 2022-04-27 17:27
  **/
-public class SonarClientIT {
-
-    private static final String SERVER_URL = "http://localhost:9000/";
-    private static final String USER = "geewaza";
-    private static final String PASSWORD = "VaMD5AYR@_L2LB*";
-    private static final String TOKEN = "ed97e566166633cf858e582042cf4a37d03195a5";
+public class SonarClientIT extends SonarIT {
 
     @Test
-    public void initSonarClientWithUserPassword() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClient(new URI(SERVER_URL), USER, PASSWORD);
+    public void initSonarClientWithUserPassword() {
         Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);
     }
 
     @Test
-    public void initSonarClientWithToken() throws URISyntaxException, IOException {
-        SonarClient client = new SonarClient(new URI(SERVER_URL), TOKEN);
+    public void initSonarClientWithToken() {
         Groups groups = client.getUserClient().getUserGroups().login(USER).execute();
         System.out.println(JSONObject.toJSONString(groups));
         Assert.assertNotNull(groups);

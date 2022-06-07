@@ -37,6 +37,15 @@ public class ShowSourceService extends AbstractService<ShowSourceService, Scm> {
     public ShowSourceService to(Integer to) {
         return put("to", to);
     }
+    /**
+     * Branch key
+     *
+     * @param branch Example value: feature/my_branch
+     * @return GetSourceLinesService
+     */
+    public ShowSourceService branch(String branch) {
+        return put("branch", branch);
+    }
 
     public ShowSourceService key(String key) {
         return put("key", key);

@@ -17,6 +17,7 @@ public class IssueInfo {
     private String severity;
     private String component;
     private String project;
+    private String branch;
     private Integer line;
     private TextRange textRange;
     private String[] flows;
@@ -72,6 +73,14 @@ public class IssueInfo {
 
     public void setProject(String project) {
         this.project = project;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
     }
 
     public Integer getLine() {
@@ -201,4 +210,5 @@ public class IssueInfo {
     public void setType(String type) {
         this.type = type;
     }
+
 }
