@@ -59,7 +59,7 @@ public abstract class AbstractService<T, S> {
     protected T put(String key, Object value) {
         if (null != value) {
             if (value instanceof Date) {
-                params.put(key, new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format((Date) value));
+                params.put(key, new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").format((Date) value));
             } else if (!(value instanceof String) || StringUtils.isNotBlank((String) value)) {
                 params.put(key, value);
             }
