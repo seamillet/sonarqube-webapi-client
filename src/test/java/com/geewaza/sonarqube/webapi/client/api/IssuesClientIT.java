@@ -6,6 +6,8 @@ import com.geewaza.sonarqube.webapi.model.issue.Issues;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Date;
+
 /**
  * <p></p>
  *
@@ -16,11 +18,12 @@ public class IssuesClientIT extends SonarIT {
 
     @Test
     public void searchIssuesService_test01() {
-        String componentKey = "we-link";
+        String componentKey = "springboot-web-multi-module-demo01";
         Issues issues = client.getIssuesClient().searchIssues()
                 .componentKeys(componentKey).types("CODE_SMELL")
                 .additionalFields("_all")
                 .facets("severities")
+                .createdBefore(new Date())
                 .ps(100)
                 .execute();
         System.out.println(JSONObject.toJSONString(issues));
